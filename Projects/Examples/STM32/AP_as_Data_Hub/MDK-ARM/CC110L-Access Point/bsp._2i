@@ -1,6 +1,0 @@
--c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I.\ -I..\..\..\..\..\Components\bsp -I..\..\..\..\..\Components\bsp\drivers -I..\..\..\..\..\Components\bsp\boards\STM32 -I..\..\..\..\..\Components\mrfi -I..\..\..\..\..\Components\simpliciti\nwk -I..\..\..\..\..\Components\simpliciti\nwk_applications -I..\..\..\..\..\Libraries\CMSIS\CM3\CoreSupport -I..\..\..\..\..\Libraries\CMSIS\CM3\DeviceSupport -I..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\..\..\..\..\Components\drivers
--I e:\Keil_v5\ARM\RV31\INC
--I e:\Keil_v5\ARM\CMSIS\Include
--I e:\Keil_v5\ARM\Inc\ST\STM32F10x
--D__UVISION_VERSION="515" -DMRFI_CC1101 -DCFG_ACCESS_POINT -DMapleRET6
--o ".\cc110l-access point\bsp.o" --omf_browse ".\cc110l-access point\bsp.crf" --depend ".\cc110l-access point\bsp.d" --feedback ".\CC110L-Access Point\CC1101-AP.fed" "..\..\..\..\..\Components\bsp\bsp.c"
