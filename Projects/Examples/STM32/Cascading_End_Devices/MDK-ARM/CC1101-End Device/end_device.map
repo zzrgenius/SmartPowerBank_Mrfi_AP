@@ -1,0 +1,1592 @@
+Component: ARM Compiler 5.05 update 2 (build 169) Tool: armlink [4d0f33]
+
+==============================================================================
+
+Section Cross References
+
+    main_manyeds_autoack.o(i.linkTo) refers to main_manyeds_autoack.o(i.toggleLED) for toggleLED
+    main_manyeds_autoack.o(i.linkTo) refers to mrfi.o(i.MRFI_DelayMs) for MRFI_DelayMs
+    main_manyeds_autoack.o(i.linkTo) refers to nwk_api.o(i.SMPL_Link) for SMPL_Link
+    main_manyeds_autoack.o(i.linkTo) refers to nwk_api.o(i.SMPL_Ioctl) for SMPL_Ioctl
+    main_manyeds_autoack.o(i.linkTo) refers to nwk_api.o(i.SMPL_SendOpt) for SMPL_SendOpt
+    main_manyeds_autoack.o(i.linkTo) refers to main_manyeds_autoack.o(.data) for sLinkID1
+    main_manyeds_autoack.o(i.main) refers to bsp.o(i.BSP_Init) for BSP_Init
+    main_manyeds_autoack.o(i.main) refers to mrfi.o(i.createRandomAddress) for createRandomAddress
+    main_manyeds_autoack.o(i.main) refers to nwk_api.o(i.SMPL_Ioctl) for SMPL_Ioctl
+    main_manyeds_autoack.o(i.main) refers to main_manyeds_autoack.o(i.toggleLED) for toggleLED
+    main_manyeds_autoack.o(i.main) refers to mrfi.o(i.MRFI_DelayMs) for MRFI_DelayMs
+    main_manyeds_autoack.o(i.main) refers to nwk_api.o(i.SMPL_Init) for SMPL_Init
+    main_manyeds_autoack.o(i.main) refers to main_manyeds_autoack.o(i.linkTo) for linkTo
+    main_manyeds_autoack.o(i.main) refers to main_manyeds_autoack.o(i.sCB) for sCB
+    main_manyeds_autoack.o(i.sCB) refers to main_manyeds_autoack.o(.data) for sLinkID1
+    bsp.o(i.BSP_Init) refers to bsp.o(i.RCC_Configuration) for RCC_Configuration
+    bsp.o(i.BSP_Init) refers to bsp.o(i.BSP_InitBoard) for BSP_InitBoard
+    bsp.o(i.BSP_Init) refers to bsp.o(i.BSP_InitDrivers) for BSP_InitDrivers
+    bsp.o(i.BSP_Init) refers to delay.o(i.Sys_delay_init) for Sys_delay_init
+    bsp.o(i.BSP_Init) refers to bsp.o(i.__bsp_ASSERT) for __bsp_ASSERT
+    bsp.o(i.BSP_Init) refers to bsp.o(.constdata) for __func__
+    bsp.o(i.BSP_InitBoard) refers to stm32f10x_dbgmcu.o(i.DBGMCU_Config) for DBGMCU_Config
+    bsp.o(i.BSP_InitBoard) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    bsp.o(i.BSP_InitBoard) refers to bsp.o(i.BSP_InitUSART) for BSP_InitUSART
+    bsp.o(i.BSP_InitButtons) refers to bsp.o(i.gpioPinConfig) for gpioPinConfig
+    bsp.o(i.BSP_InitDrivers) refers to bsp.o(i.BSP_InitLeds) for BSP_InitLeds
+    bsp.o(i.BSP_InitDrivers) refers to bsp.o(i.BSP_InitButtons) for BSP_InitButtons
+    bsp.o(i.BSP_InitLeds) refers to bsp.o(i.gpioPinConfig) for gpioPinConfig
+    bsp.o(i.BSP_InitSPI) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    bsp.o(i.BSP_InitSPI) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
+    bsp.o(i.BSP_InitSPI) refers to bsp.o(i.__bsp_ASSERT) for __bsp_ASSERT
+    bsp.o(i.BSP_InitSPI) refers to stm32f10x_spi.o(i.SPI_Init) for SPI_Init
+    bsp.o(i.BSP_InitSPI) refers to stm32f10x_spi.o(i.SPI_Cmd) for SPI_Cmd
+    bsp.o(i.BSP_InitSPI) refers to bsp.o(.constdata) for __func__
+    bsp.o(i.BSP_InitUSART) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    bsp.o(i.BSP_InitUSART) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
+    bsp.o(i.BSP_InitUSART) refers to bsp.o(i.gpioPinConfig) for gpioPinConfig
+    bsp.o(i.BSP_InitUSART) refers to stm32f10x_usart.o(i.USART_Init) for USART_Init
+    bsp.o(i.BSP_InitUSART) refers to stm32f10x_usart.o(i.USART_Cmd) for USART_Cmd
+    bsp.o(i.BSP_RecvUSART) refers to stm32f10x_usart.o(i.USART_GetFlagStatus) for USART_GetFlagStatus
+    bsp.o(i.BSP_RecvUSART) refers to stm32f10x_usart.o(i.USART_ReceiveData) for USART_ReceiveData
+    bsp.o(i.BSP_SendUSART) refers to stm32f10x_usart.o(i.USART_GetFlagStatus) for USART_GetFlagStatus
+    bsp.o(i.BSP_SendUSART) refers to stm32f10x_usart.o(i.USART_SendData) for USART_SendData
+    bsp.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_DeInit) for RCC_DeInit
+    bsp.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_HSEConfig) for RCC_HSEConfig
+    bsp.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp) for RCC_WaitForHSEStartUp
+    bsp.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_HCLKConfig) for RCC_HCLKConfig
+    bsp.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_PCLK2Config) for RCC_PCLK2Config
+    bsp.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_PCLK1Config) for RCC_PCLK1Config
+    bsp.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_PLLConfig) for RCC_PLLConfig
+    bsp.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_PLLCmd) for RCC_PLLCmd
+    bsp.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_GetFlagStatus) for RCC_GetFlagStatus
+    bsp.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_SYSCLKConfig) for RCC_SYSCLKConfig
+    bsp.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_GetSYSCLKSource) for RCC_GetSYSCLKSource
+    bsp.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_LSICmd) for RCC_LSICmd
+    bsp.o(i.RCC_Configuration) refers to misc.o(i.SysTick_CLKSourceConfig) for SysTick_CLKSourceConfig
+    bsp.o(i.__bsp_ASSERT) refers to bsp.o(i.__bsp_debug_msg) for __bsp_debug_msg
+    bsp.o(i.__bsp_ASSERT) refers to bsp.o(i.__bsp_debug_dec) for __bsp_debug_dec
+    bsp.o(i.__bsp_ASSERT) refers to bsp.o(i.__bsp_debug_msg_ln) for __bsp_debug_msg_ln
+    bsp.o(i.__bsp_ASSERT) refers to system_stm32f10x.o(.data) for SystemCoreClock
+    bsp.o(i.__bsp_debug) refers to stm32f10x_usart.o(i.USART_GetFlagStatus) for USART_GetFlagStatus
+    bsp.o(i.__bsp_debug) refers to stm32f10x_usart.o(i.USART_SendData) for USART_SendData
+    bsp.o(i.__bsp_debug_dec) refers to bsp.o(i.__bsp_debug) for __bsp_debug
+    bsp.o(i.__bsp_debug_hex) refers to bsp.o(i.__bsp_debug_hex_1) for __bsp_debug_hex_1
+    bsp.o(i.__bsp_debug_hex_1) refers to bsp.o(i.__bsp_debug) for __bsp_debug
+    bsp.o(i.__bsp_debug_hex_ln) refers to bsp.o(i.__bsp_debug_hex) for __bsp_debug_hex
+    bsp.o(i.__bsp_debug_hex_ln) refers to bsp.o(i.__bsp_debug_msg) for __bsp_debug_msg
+    bsp.o(i.__bsp_debug_msg) refers to bsp.o(i.__bsp_debug) for __bsp_debug
+    bsp.o(i.__bsp_debug_msg_ln) refers to bsp.o(i.__bsp_debug_msg) for __bsp_debug_msg
+    bsp.o(i.fputc) refers to bsp.o(i.__bsp_debug) for __bsp_debug
+    bsp.o(i.gpioPinConfig) refers to bsp.o(i.gpioPort) for gpioPort
+    bsp.o(i.gpioPinHigh) refers to bsp.o(i.gpioPinMask) for gpioPinMask
+    bsp.o(i.gpioPinHigh) refers to bsp.o(i.gpioPort) for gpioPort
+    bsp.o(i.gpioPinIn) refers to bsp.o(i.gpioPort) for gpioPort
+    bsp.o(i.gpioPinIn) refers to bsp.o(i.gpioPinMask) for gpioPinMask
+    bsp.o(i.gpioPinLow) refers to bsp.o(i.gpioPinMask) for gpioPinMask
+    bsp.o(i.gpioPinLow) refers to bsp.o(i.gpioPort) for gpioPort
+    bsp.o(i.gpioPinOut) refers to bsp.o(i.gpioPort) for gpioPort
+    bsp.o(i.gpioPinOut) refers to bsp.o(i.gpioPinMask) for gpioPinMask
+    delay.o(i.Sys_delay_init) refers to misc.o(i.SysTick_CLKSourceConfig) for SysTick_CLKSourceConfig
+    delay.o(i.Sys_delay_init) refers to system_stm32f10x.o(.data) for SystemCoreClock
+    delay.o(i.Sys_delay_init) refers to delay.o(.data) for fac_us
+    delay.o(i.Sys_delay_ms) refers to delay.o(.data) for fac_ms
+    delay.o(i.Sys_delay_us) refers to delay.o(.data) for fac_us
+    mrfi.o(i.EXTI1_IRQHandler) refers to bsp.o(i.__bsp_debug_msg_ln) for __bsp_debug_msg_ln
+    mrfi.o(i.EXTI1_IRQHandler) refers to mrfi.o(i.MRFI_GpioIsr) for MRFI_GpioIsr
+    mrfi.o(i.EXTI1_IRQHandler) refers to mrfi.o(.data) for mrfi_ignore_interrupt
+    mrfi.o(i.MRFI_DelayMs) refers to mrfi.o(i.Mrfi_DelayUsec) for Mrfi_DelayUsec
+    mrfi.o(i.MRFI_DisableRxAddrFilter) refers to mrfi.o(i.mrfiSpiWriteReg) for mrfiSpiWriteReg
+    mrfi.o(i.MRFI_DisableRxAddrFilter) refers to mrfi.o(.data) for mrfiRxFilterEnabled
+    mrfi.o(i.MRFI_EnableRxAddrFilter) refers to bsp.o(i.__bsp_ASSERT) for __bsp_ASSERT
+    mrfi.o(i.MRFI_EnableRxAddrFilter) refers to mrfi.o(i.mrfiSpiWriteReg) for mrfiSpiWriteReg
+    mrfi.o(i.MRFI_EnableRxAddrFilter) refers to mrfi.o(.data) for mrfiRxFilterAddr
+    mrfi.o(i.MRFI_EnableRxAddrFilter) refers to mrfi.o(.constdata) for mrfiBroadcastAddr
+    mrfi.o(i.MRFI_GetRadioState) refers to mrfi.o(.data) for mrfiRadioState
+    mrfi.o(i.MRFI_GpioIsr) refers to mrfi.o(i.Mrfi_SyncPinRxIsr) for Mrfi_SyncPinRxIsr
+    mrfi.o(i.MRFI_Init) refers to memseta.o(.text) for __aeabi_memclr
+    mrfi.o(i.MRFI_Init) refers to bsp.o(i.gpioPinConfig) for gpioPinConfig
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(i.mrfiSpiInit) for mrfiSpiInit
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(i.MRFI_SPI_CSN_IS_HIGH) for MRFI_SPI_CSN_IS_HIGH
+    mrfi.o(i.MRFI_Init) refers to bsp.o(i.__bsp_ASSERT) for __bsp_ASSERT
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(i.MRFI_SPI_DRIVE_CSN_LOW) for MRFI_SPI_DRIVE_CSN_LOW
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(i.Mrfi_DelayUsec) for Mrfi_DelayUsec
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(i.MRFI_SPI_DRIVE_CSN_HIGH) for MRFI_SPI_DRIVE_CSN_HIGH
+    mrfi.o(i.MRFI_Init) refers to bsp.o(i.gpioPinIn) for gpioPinIn
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(i.__mrfi_SPI_WRITE_BYTE) for __mrfi_SPI_WRITE_BYTE
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(i.__mrfi_SPI_WAIT_DONE) for __mrfi_SPI_WAIT_DONE
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(i.mrfiSpiWriteReg) for mrfiSpiWriteReg
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(i.mrfiSpiReadReg) for mrfiSpiReadReg
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(i.MRFI_SetLogicalChannel) for MRFI_SetLogicalChannel
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(i.MRFI_SetRFPwr) for MRFI_SetRFPwr
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(i.mrfiSpiCmdStrobe) for mrfiSpiCmdStrobe
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(i.Mrfi_RxModeOff) for Mrfi_RxModeOff
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(i.__mrfi_GDO0_INIT) for __mrfi_GDO0_INIT
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(.bss) for mrfiIncomingPacket
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(.constdata) for __func__
+    mrfi.o(i.MRFI_Init) refers to system_stm32f10x.o(.data) for SystemCoreClock
+    mrfi.o(i.MRFI_Init) refers to mrfi.o(.data) for mrfiRadioState
+    mrfi.o(i.MRFI_PostKillSem) refers to mrfi.o(.data) for sReplyDelayContext
+    mrfi.o(i.MRFI_PrepareToTx) refers to mrfi.o(i.mrfiSpiCmdStrobe) for mrfiSpiCmdStrobe
+    mrfi.o(i.MRFI_PrepareToTx) refers to mrfi.o(i.mrfiSpiWriteTxFifo) for mrfiSpiWriteTxFifo
+    mrfi.o(i.MRFI_RandomByte) refers to mrfi.o(.data) for mrfiRndSeed
+    mrfi.o(i.MRFI_Receive) refers to memmovea.o(.text) for __aeabi_memcpy
+    mrfi.o(i.MRFI_Receive) refers to mrfi.o(.bss) for mrfiIncomingPacket
+    mrfi.o(i.MRFI_ReplyDelay) refers to mrfi.o(i.Mrfi_DelayUsecSem) for Mrfi_DelayUsecSem
+    mrfi.o(i.MRFI_ReplyDelay) refers to delay.o(i.Sys_delay_ms) for Sys_delay_ms
+    mrfi.o(i.MRFI_ReplyDelay) refers to mrfi.o(.data) for sReplyDelayScalar
+    mrfi.o(i.MRFI_Rssi) refers to bsp.o(i.__bsp_ASSERT) for __bsp_ASSERT
+    mrfi.o(i.MRFI_Rssi) refers to mrfi.o(i.mrfiSpiReadReg) for mrfiSpiReadReg
+    mrfi.o(i.MRFI_Rssi) refers to mrfi.o(i.Mrfi_DelayUsec) for Mrfi_DelayUsec
+    mrfi.o(i.MRFI_Rssi) refers to mrfi.o(i.Mrfi_CalculateRssi) for Mrfi_CalculateRssi
+    mrfi.o(i.MRFI_Rssi) refers to mrfi.o(.data) for mrfiRadioState
+    mrfi.o(i.MRFI_Rssi) refers to mrfi.o(.constdata) for __func__
+    mrfi.o(i.MRFI_RxAddrIsFiltered) refers to mrfi.o(.data) for mrfiRxFilterEnabled
+    mrfi.o(i.MRFI_RxAddrIsFiltered) refers to mrfi.o(.constdata) for mrfiBroadcastAddr
+    mrfi.o(i.MRFI_RxIdle) refers to bsp.o(i.__bsp_ASSERT) for __bsp_ASSERT
+    mrfi.o(i.MRFI_RxIdle) refers to mrfi.o(i.Mrfi_RxModeOff) for Mrfi_RxModeOff
+    mrfi.o(i.MRFI_RxIdle) refers to mrfi.o(.data) for mrfiRadioState
+    mrfi.o(i.MRFI_RxIdle) refers to mrfi.o(.constdata) for __func__
+    mrfi.o(i.MRFI_RxOn) refers to bsp.o(i.__bsp_ASSERT) for __bsp_ASSERT
+    mrfi.o(i.MRFI_RxOn) refers to mrfi.o(i.Mrfi_RxModeOn) for Mrfi_RxModeOn
+    mrfi.o(i.MRFI_RxOn) refers to mrfi.o(.data) for mrfiRadioState
+    mrfi.o(i.MRFI_RxOn) refers to mrfi.o(.constdata) for __func__
+    mrfi.o(i.MRFI_SetLogicalChannel) refers to bsp.o(i.__bsp_ASSERT) for __bsp_ASSERT
+    mrfi.o(i.MRFI_SetLogicalChannel) refers to mrfi.o(i.Mrfi_RxModeOff) for Mrfi_RxModeOff
+    mrfi.o(i.MRFI_SetLogicalChannel) refers to mrfi.o(i.mrfiSpiWriteReg) for mrfiSpiWriteReg
+    mrfi.o(i.MRFI_SetLogicalChannel) refers to mrfi.o(i.Mrfi_RxModeOn) for Mrfi_RxModeOn
+    mrfi.o(i.MRFI_SetLogicalChannel) refers to mrfi.o(.constdata) for __func__
+    mrfi.o(i.MRFI_SetLogicalChannel) refers to mrfi.o(.data) for mrfiRadioState
+    mrfi.o(i.MRFI_SetRFPwr) refers to bsp.o(i.__bsp_ASSERT) for __bsp_ASSERT
+    mrfi.o(i.MRFI_SetRFPwr) refers to mrfi.o(i.Mrfi_RxModeOff) for Mrfi_RxModeOff
+    mrfi.o(i.MRFI_SetRFPwr) refers to mrfi.o(i.mrfiSpiWriteReg) for mrfiSpiWriteReg
+    mrfi.o(i.MRFI_SetRFPwr) refers to mrfi.o(i.Mrfi_RxModeOn) for Mrfi_RxModeOn
+    mrfi.o(i.MRFI_SetRFPwr) refers to mrfi.o(.constdata) for __func__
+    mrfi.o(i.MRFI_SetRFPwr) refers to mrfi.o(.data) for mrfiRadioState
+    mrfi.o(i.MRFI_SetRxAddrFilter) refers to mrfi.o(i.mrfiSpiWriteReg) for mrfiSpiWriteReg
+    mrfi.o(i.MRFI_SetRxAddrFilter) refers to mrfi.o(.constdata) for mrfiBroadcastAddr
+    mrfi.o(i.MRFI_SetRxAddrFilter) refers to mrfi.o(.data) for mrfiRxFilterAddr
+    mrfi.o(i.MRFI_Sleep) refers to mrfi.o(i.MRFI_RxIdle) for MRFI_RxIdle
+    mrfi.o(i.MRFI_Sleep) refers to mrfi.o(i.mrfiSpiCmdStrobe) for mrfiSpiCmdStrobe
+    mrfi.o(i.MRFI_Sleep) refers to mrfi.o(.data) for mrfiRadioState
+    mrfi.o(i.MRFI_Transmit) refers to bsp.o(i.__bsp_ASSERT) for __bsp_ASSERT
+    mrfi.o(i.MRFI_Transmit) refers to mrfi.o(i.Mrfi_RxModeOff) for Mrfi_RxModeOff
+    mrfi.o(i.MRFI_Transmit) refers to mrfi.o(i.MRFI_PrepareToTx) for MRFI_PrepareToTx
+    mrfi.o(i.MRFI_Transmit) refers to mrfi.o(i.mrfiSpiCmdStrobe) for mrfiSpiCmdStrobe
+    mrfi.o(i.MRFI_Transmit) refers to delay.o(i.Sys_delay_ms) for Sys_delay_ms
+    mrfi.o(i.MRFI_Transmit) refers to mrfi.o(i.Mrfi_DelayUsecLong) for Mrfi_DelayUsecLong
+    mrfi.o(i.MRFI_Transmit) refers to mrfi.o(i.mrfiSpiWriteReg) for mrfiSpiWriteReg
+    mrfi.o(i.MRFI_Transmit) refers to mrfi.o(i.Mrfi_DelayUsec) for Mrfi_DelayUsec
+    mrfi.o(i.MRFI_Transmit) refers to mrfi.o(i.mrfiSpiReadReg) for mrfiSpiReadReg
+    mrfi.o(i.MRFI_Transmit) refers to mrfi.o(i.Mrfi_RandomBackoffDelay) for Mrfi_RandomBackoffDelay
+    mrfi.o(i.MRFI_Transmit) refers to mrfi.o(i.Mrfi_RxModeOn) for Mrfi_RxModeOn
+    mrfi.o(i.MRFI_Transmit) refers to mrfi.o(.data) for mrfiRadioState
+    mrfi.o(i.MRFI_Transmit) refers to mrfi.o(.constdata) for __func__
+    mrfi.o(i.MRFI_Transmit) refers to mrfi.o(i.mrfi_TxImmediateDone) for mrfi_TxImmediateDone
+    mrfi.o(i.MRFI_Transmit) refers to mrfi.o(i.mrfi_TxCCADone) for mrfi_TxCCADone
+    mrfi.o(i.MRFI_WakeUp) refers to mrfi.o(i.MRFI_SPI_DRIVE_CSN_LOW) for MRFI_SPI_DRIVE_CSN_LOW
+    mrfi.o(i.MRFI_WakeUp) refers to bsp.o(i.gpioPinIn) for gpioPinIn
+    mrfi.o(i.MRFI_WakeUp) refers to mrfi.o(i.MRFI_SPI_DRIVE_CSN_HIGH) for MRFI_SPI_DRIVE_CSN_HIGH
+    mrfi.o(i.MRFI_WakeUp) refers to mrfi.o(i.mrfiSpiCmdStrobe) for mrfiSpiCmdStrobe
+    mrfi.o(i.MRFI_WakeUp) refers to mrfi.o(.data) for mrfiRadioState
+    mrfi.o(i.Mrfi_DelayUsec) refers to bsp.o(i.BSP_Delay) for BSP_Delay
+    mrfi.o(i.Mrfi_DelayUsecLong) refers to bsp.o(i.BSP_Delay) for BSP_Delay
+    mrfi.o(i.Mrfi_DelayUsecSem) refers to bsp.o(i.BSP_Delay) for BSP_Delay
+    mrfi.o(i.Mrfi_DelayUsecSem) refers to mrfi.o(.data) for sKillSem
+    mrfi.o(i.Mrfi_RandomBackoffDelay) refers to mrfi.o(i.MRFI_RandomByte) for MRFI_RandomByte
+    mrfi.o(i.Mrfi_RandomBackoffDelay) refers to mrfi.o(i.Mrfi_DelayUsec) for Mrfi_DelayUsec
+    mrfi.o(i.Mrfi_RandomBackoffDelay) refers to mrfi.o(.data) for sBackoffHelper
+    mrfi.o(i.Mrfi_RxModeOff) refers to mrfi.o(i.mrfiSpiCmdStrobe) for mrfiSpiCmdStrobe
+    mrfi.o(i.Mrfi_RxModeOff) refers to mrfi.o(.data) for rx_isr_context
+    mrfi.o(i.Mrfi_RxModeOn) refers to mrfi.o(i.mrfiSpiCmdStrobe) for mrfiSpiCmdStrobe
+    mrfi.o(i.Mrfi_RxModeOn) refers to mrfi.o(.data) for rx_isr_context
+    mrfi.o(i.Mrfi_SyncPinRxIsr) refers to bsp.o(i.__bsp_ASSERT) for __bsp_ASSERT
+    mrfi.o(i.Mrfi_SyncPinRxIsr) refers to mrfi.o(i.mrfiSpiReadReg) for mrfiSpiReadReg
+    mrfi.o(i.Mrfi_SyncPinRxIsr) refers to mrfi.o(i.mrfiSpiReadRxFifo) for mrfiSpiReadRxFifo
+    mrfi.o(i.Mrfi_SyncPinRxIsr) refers to mrfi.o(i.mrfiSpiCmdStrobe) for mrfiSpiCmdStrobe
+    mrfi.o(i.Mrfi_SyncPinRxIsr) refers to memseta.o(.text) for __aeabi_memclr
+    mrfi.o(i.Mrfi_SyncPinRxIsr) refers to mrfi.o(i.MRFI_RxAddrIsFiltered) for MRFI_RxAddrIsFiltered
+    mrfi.o(i.Mrfi_SyncPinRxIsr) refers to mrfi.o(i.Mrfi_CalculateRssi) for Mrfi_CalculateRssi
+    mrfi.o(i.Mrfi_SyncPinRxIsr) refers to nwk_frame.o(i.MRFI_RxCompleteISR) for MRFI_RxCompleteISR
+    mrfi.o(i.Mrfi_SyncPinRxIsr) refers to mrfi.o(.data) for mrfiRadioState
+    mrfi.o(i.Mrfi_SyncPinRxIsr) refers to mrfi.o(.constdata) for __func__
+    mrfi.o(i.Mrfi_SyncPinRxIsr) refers to mrfi.o(.bss) for mrfiIncomingPacket
+    mrfi.o(i.__mrfi_GDO0_INIT) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    mrfi.o(i.__mrfi_GDO0_INIT) refers to stm32f10x_gpio.o(i.GPIO_EXTILineConfig) for GPIO_EXTILineConfig
+    mrfi.o(i.__mrfi_GDO0_INIT) refers to stm32f10x_exti.o(i.EXTI_Init) for EXTI_Init
+    mrfi.o(i.__mrfi_GDO0_INIT) refers to misc.o(i.NVIC_Init) for NVIC_Init
+    mrfi.o(i.createRandomAddress) refers to stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd) for RCC_AHBPeriphClockCmd
+    mrfi.o(i.createRandomAddress) refers to stm32f10x_crc.o(i.CRC_ResetDR) for CRC_ResetDR
+    mrfi.o(i.createRandomAddress) refers to stm32f10x_crc.o(i.CRC_CalcCRC) for CRC_CalcCRC
+    mrfi.o(i.createRandomAddress) refers to stm32f10x_crc.o(i.CRC_GetCRC) for CRC_GetCRC
+    mrfi.o(i.createRandomAddress) refers to nwk_api.o(i.SMPL_Ioctl) for SMPL_Ioctl
+    mrfi.o(i.mrfiSpiCmdStrobe) refers to mrfi.o(i.__mrfi_SPI_IS_INITIALIZED) for __mrfi_SPI_IS_INITIALIZED
+    mrfi.o(i.mrfiSpiCmdStrobe) refers to bsp.o(i.__bsp_ASSERT) for __bsp_ASSERT
+    mrfi.o(i.mrfiSpiCmdStrobe) refers to mrfi.o(i.MRFI_SPI_DRIVE_CSN_HIGH) for MRFI_SPI_DRIVE_CSN_HIGH
+    mrfi.o(i.mrfiSpiCmdStrobe) refers to mrfi.o(i.MRFI_SPI_DRIVE_CSN_LOW) for MRFI_SPI_DRIVE_CSN_LOW
+    mrfi.o(i.mrfiSpiCmdStrobe) refers to mrfi.o(i.__mrfi_SPI_WRITE_BYTE) for __mrfi_SPI_WRITE_BYTE
+    mrfi.o(i.mrfiSpiCmdStrobe) refers to mrfi.o(i.__mrfi_SPI_WAIT_DONE) for __mrfi_SPI_WAIT_DONE
+    mrfi.o(i.mrfiSpiCmdStrobe) refers to mrfi.o(i.__mrfi_SPI_READ_BYTE) for __mrfi_SPI_READ_BYTE
+    mrfi.o(i.mrfiSpiCmdStrobe) refers to mrfi.o(.constdata) for __func__
+    mrfi.o(i.mrfiSpiInit) refers to mrfi.o(i.MRFI_SPI_DRIVE_CSN_HIGH) for MRFI_SPI_DRIVE_CSN_HIGH
+    mrfi.o(i.mrfiSpiInit) refers to bsp.o(i.gpioPinConfig) for gpioPinConfig
+    mrfi.o(i.mrfiSpiInit) refers to bsp.o(i.BSP_InitSPI) for BSP_InitSPI
+    mrfi.o(i.mrfiSpiReadReg) refers to bsp.o(i.__bsp_ASSERT) for __bsp_ASSERT
+    mrfi.o(i.mrfiSpiReadReg) refers to mrfi.o(i.spiRegAccess) for spiRegAccess
+    mrfi.o(i.mrfiSpiReadReg) refers to mrfi.o(.constdata) for __func__
+    mrfi.o(i.mrfiSpiReadRxFifo) refers to mrfi.o(i.spiBurstFifoAccess) for spiBurstFifoAccess
+    mrfi.o(i.mrfiSpiWriteReg) refers to bsp.o(i.__bsp_ASSERT) for __bsp_ASSERT
+    mrfi.o(i.mrfiSpiWriteReg) refers to mrfi.o(i.spiRegAccess) for spiRegAccess
+    mrfi.o(i.mrfiSpiWriteReg) refers to mrfi.o(.constdata) for __func__
+    mrfi.o(i.mrfiSpiWriteTxFifo) refers to mrfi.o(i.spiBurstFifoAccess) for spiBurstFifoAccess
+    mrfi.o(i.spiBurstFifoAccess) refers to mrfi.o(i.__mrfi_SPI_IS_INITIALIZED) for __mrfi_SPI_IS_INITIALIZED
+    mrfi.o(i.spiBurstFifoAccess) refers to bsp.o(i.__bsp_ASSERT) for __bsp_ASSERT
+    mrfi.o(i.spiBurstFifoAccess) refers to mrfi.o(i.MRFI_SPI_DRIVE_CSN_HIGH) for MRFI_SPI_DRIVE_CSN_HIGH
+    mrfi.o(i.spiBurstFifoAccess) refers to mrfi.o(i.MRFI_SPI_DRIVE_CSN_LOW) for MRFI_SPI_DRIVE_CSN_LOW
+    mrfi.o(i.spiBurstFifoAccess) refers to mrfi.o(i.__mrfi_SPI_WRITE_BYTE) for __mrfi_SPI_WRITE_BYTE
+    mrfi.o(i.spiBurstFifoAccess) refers to mrfi.o(i.__mrfi_SPI_WAIT_DONE) for __mrfi_SPI_WAIT_DONE
+    mrfi.o(i.spiBurstFifoAccess) refers to mrfi.o(i.__mrfi_SPI_READ_BYTE) for __mrfi_SPI_READ_BYTE
+    mrfi.o(i.spiBurstFifoAccess) refers to mrfi.o(i.MRFI_SPI_CSN_IS_HIGH) for MRFI_SPI_CSN_IS_HIGH
+    mrfi.o(i.spiBurstFifoAccess) refers to mrfi.o(.constdata) for __func__
+    mrfi.o(i.spiRegAccess) refers to mrfi.o(i.__mrfi_SPI_IS_INITIALIZED) for __mrfi_SPI_IS_INITIALIZED
+    mrfi.o(i.spiRegAccess) refers to bsp.o(i.__bsp_ASSERT) for __bsp_ASSERT
+    mrfi.o(i.spiRegAccess) refers to mrfi.o(i.MRFI_SPI_DRIVE_CSN_HIGH) for MRFI_SPI_DRIVE_CSN_HIGH
+    mrfi.o(i.spiRegAccess) refers to mrfi.o(i.MRFI_SPI_DRIVE_CSN_LOW) for MRFI_SPI_DRIVE_CSN_LOW
+    mrfi.o(i.spiRegAccess) refers to mrfi.o(i.__mrfi_SPI_WRITE_BYTE) for __mrfi_SPI_WRITE_BYTE
+    mrfi.o(i.spiRegAccess) refers to mrfi.o(i.__mrfi_SPI_WAIT_DONE) for __mrfi_SPI_WAIT_DONE
+    mrfi.o(i.spiRegAccess) refers to mrfi.o(i.__mrfi_SPI_READ_BYTE) for __mrfi_SPI_READ_BYTE
+    mrfi.o(i.spiRegAccess) refers to mrfi.o(.constdata) for __func__
+    nwk.o(i.initializeConnection) refers to nwk.o(i.map_lid2idx) for map_lid2idx
+    nwk.o(i.initializeConnection) refers to nwk.o(.data) for sPersistInfo
+    nwk.o(i.map_lid2idx) refers to nwk.o(.data) for sPersistInfo
+    nwk.o(i.nwk_allocateLocalRxPort) refers to memcmp.o(.text) for memcmp
+    nwk.o(i.nwk_allocateLocalRxPort) refers to nwk.o(.data) for sPersistInfo
+    nwk.o(i.nwk_findAddressMatch) refers to memcmp.o(.text) for memcmp
+    nwk.o(i.nwk_findAddressMatch) refers to nwk.o(.data) for sPersistInfo
+    nwk.o(i.nwk_findPeer) refers to memcmp.o(.text) for memcmp
+    nwk.o(i.nwk_findPeer) refers to nwk.o(.data) for sPersistInfo
+    nwk.o(i.nwk_getConnInfo) refers to nwk.o(i.map_lid2idx) for map_lid2idx
+    nwk.o(i.nwk_getConnInfo) refers to nwk.o(.data) for sPersistInfo
+    nwk.o(i.nwk_getNextConnection) refers to nwk.o(i.initializeConnection) for initializeConnection
+    nwk.o(i.nwk_getNextConnection) refers to nwk.o(.data) for sPersistInfo
+    nwk.o(i.nwk_getNumObjectFromMsg) refers to memmovea.o(.text) for __aeabi_memmove
+    nwk.o(i.nwk_isConnectionValid) refers to memcmp.o(.text) for memcmp
+    nwk.o(i.nwk_isConnectionValid) refers to nwk_frame.o(i.nwk_sendAckReply) for nwk_sendAckReply
+    nwk.o(i.nwk_isConnectionValid) refers to mrfi.o(i.MRFI_PostKillSem) for MRFI_PostKillSem
+    nwk.o(i.nwk_isConnectionValid) refers to nwk.o(.data) for sPersistInfo
+    nwk.o(i.nwk_isLinkDuplicate) refers to memcmp.o(.text) for memcmp
+    nwk.o(i.nwk_isLinkDuplicate) refers to nwk.o(.data) for sPersistInfo
+    nwk.o(i.nwk_isValidReply) refers to nwk_globals.o(i.nwk_getMyAddress) for nwk_getMyAddress
+    nwk.o(i.nwk_isValidReply) refers to memcmp.o(.text) for memcmp
+    nwk.o(i.nwk_nwkInit) refers to memseta.o(.text) for __aeabi_memclr
+    nwk.o(i.nwk_nwkInit) refers to nwk_globals.o(i.nwk_globalsInit) for nwk_globalsInit
+    nwk.o(i.nwk_nwkInit) refers to nwk_frame.o(i.nwk_frameInit) for nwk_frameInit
+    nwk.o(i.nwk_nwkInit) refers to nwk_qmgmt.o(i.nwk_QInit) for nwk_QInit
+    nwk.o(i.nwk_nwkInit) refers to nwk_freq.o(i.nwk_freqInit) for nwk_freqInit
+    nwk.o(i.nwk_nwkInit) refers to nwk_ping.o(i.nwk_pingInit) for nwk_pingInit
+    nwk.o(i.nwk_nwkInit) refers to nwk_join.o(i.nwk_joinInit) for nwk_joinInit
+    nwk.o(i.nwk_nwkInit) refers to nwk_mgmt.o(i.nwk_mgmtInit) for nwk_mgmtInit
+    nwk.o(i.nwk_nwkInit) refers to nwk_link.o(i.nwk_linkInit) for nwk_linkInit
+    nwk.o(i.nwk_nwkInit) refers to nwk_security.o(i.nwk_securityInit) for nwk_securityInit
+    nwk.o(i.nwk_nwkInit) refers to nwk_globals.o(i.nwk_getBCastAddress) for nwk_getBCastAddress
+    nwk.o(i.nwk_nwkInit) refers to nwk.o(.data) for sPersistInfo
+    nwk.o(i.nwk_putNumObjectIntoMsg) refers to memmovea.o(.text) for __aeabi_memmove
+    nwk_api.o(i.SMPL_Init) refers to mrfi.o(i.MRFI_Init) for MRFI_Init
+    nwk_api.o(i.SMPL_Init) refers to nwk.o(i.nwk_nwkInit) for nwk_nwkInit
+    nwk_api.o(i.SMPL_Init) refers to mrfi.o(i.MRFI_WakeUp) for MRFI_WakeUp
+    nwk_api.o(i.SMPL_Init) refers to nwk_globals.o(i.nwk_getMyAddress) for nwk_getMyAddress
+    nwk_api.o(i.SMPL_Init) refers to mrfi.o(i.MRFI_SetRxAddrFilter) for MRFI_SetRxAddrFilter
+    nwk_api.o(i.SMPL_Init) refers to mrfi.o(i.MRFI_EnableRxAddrFilter) for MRFI_EnableRxAddrFilter
+    nwk_api.o(i.SMPL_Init) refers to nwk_join.o(i.nwk_join) for nwk_join
+    nwk_api.o(i.SMPL_Init) refers to nwk_api.o(.data) for sInit_done
+    nwk_api.o(i.SMPL_Ioctl) refers to nwk_api.o(i.ioctlPreInitAccessIsOK) for ioctlPreInitAccessIsOK
+    nwk_api.o(i.SMPL_Ioctl) refers to nwk_ioctl.o(i.nwk_connectionControl) for nwk_connectionControl
+    nwk_api.o(i.SMPL_Ioctl) refers to nwk_ioctl.o(i.nwk_deviceAddress) for nwk_deviceAddress
+    nwk_api.o(i.SMPL_Ioctl) refers to nwk_ioctl.o(i.nwk_rawSend) for nwk_rawSend
+    nwk_api.o(i.SMPL_Ioctl) refers to nwk_ioctl.o(i.nwk_rawReceive) for nwk_rawReceive
+    nwk_api.o(i.SMPL_Ioctl) refers to nwk_ioctl.o(i.nwk_radioControl) for nwk_radioControl
+    nwk_api.o(i.SMPL_Ioctl) refers to nwk_globals.o(i.nwk_getFWVersion) for nwk_getFWVersion
+    nwk_api.o(i.SMPL_Ioctl) refers to nwk_globals.o(i.nwk_getProtocolVersion) for nwk_getProtocolVersion
+    nwk_api.o(i.SMPL_Ioctl) refers to nwk_api.o(.data) for sInit_done
+    nwk_api.o(i.SMPL_Link) refers to nwk_link.o(i.nwk_link) for nwk_link
+    nwk_api.o(i.SMPL_LinkListen) refers to mrfi.o(i.MRFI_GetRadioState) for MRFI_GetRadioState
+    nwk_api.o(i.SMPL_LinkListen) refers to nwk_link.o(i.nwk_setListenContext) for nwk_setListenContext
+    nwk_api.o(i.SMPL_LinkListen) refers to mrfi.o(i.MRFI_WakeUp) for MRFI_WakeUp
+    nwk_api.o(i.SMPL_LinkListen) refers to mrfi.o(i.MRFI_RxOn) for MRFI_RxOn
+    nwk_api.o(i.SMPL_LinkListen) refers to nwk_link.o(i.nwk_getLocalLinkID) for nwk_getLocalLinkID
+    nwk_api.o(i.SMPL_LinkListen) refers to mrfi.o(i.MRFI_DelayMs) for MRFI_DelayMs
+    nwk_api.o(i.SMPL_LinkListen) refers to mrfi.o(i.MRFI_Sleep) for MRFI_Sleep
+    nwk_api.o(i.SMPL_LinkListen) refers to mrfi.o(i.MRFI_RxIdle) for MRFI_RxIdle
+    nwk_api.o(i.SMPL_Receive) refers to nwk.o(i.nwk_getConnInfo) for nwk_getConnInfo
+    nwk_api.o(i.SMPL_Receive) refers to nwk.o(i.nwk_checkConnInfo) for nwk_checkConnInfo
+    nwk_api.o(i.SMPL_Receive) refers to nwk_frame.o(i.nwk_retrieveFrame) for nwk_retrieveFrame
+    nwk_api.o(i.SMPL_Send) refers to nwk_api.o(i.SMPL_SendOpt) for SMPL_SendOpt
+    nwk_api.o(i.SMPL_SendOpt) refers to nwk.o(i.nwk_getConnInfo) for nwk_getConnInfo
+    nwk_api.o(i.SMPL_SendOpt) refers to mrfi.o(i.MRFI_GetRadioState) for MRFI_GetRadioState
+    nwk_api.o(i.SMPL_SendOpt) refers to nwk.o(i.nwk_checkConnInfo) for nwk_checkConnInfo
+    nwk_api.o(i.SMPL_SendOpt) refers to nwk_frame.o(i.nwk_buildFrame) for nwk_buildFrame
+    nwk_api.o(i.SMPL_SendOpt) refers to nwk_frame.o(i.nwk_buildAckReqFrame) for nwk_buildAckReqFrame
+    nwk_api.o(i.SMPL_SendOpt) refers to nwk_frame.o(i.nwk_sendFrame) for nwk_sendFrame
+    nwk_api.o(i.SMPL_SendOpt) refers to mrfi.o(i.MRFI_WakeUp) for MRFI_WakeUp
+    nwk_api.o(i.SMPL_SendOpt) refers to mrfi.o(i.MRFI_RxOn) for MRFI_RxOn
+    nwk_api.o(i.SMPL_SendOpt) refers to mrfi.o(i.MRFI_ReplyDelay) for MRFI_ReplyDelay
+    nwk_api.o(i.SMPL_SendOpt) refers to delay.o(i.Sys_delay_ms) for Sys_delay_ms
+    nwk_api.o(i.SMPL_SendOpt) refers to mrfi.o(i.MRFI_Sleep) for MRFI_Sleep
+    nwk_api.o(i.SMPL_SendOpt) refers to mrfi.o(i.MRFI_RxIdle) for MRFI_RxIdle
+    nwk_frame.o(i.MRFI_RxCompleteISR) refers to nwk_qmgmt.o(i.nwk_QfindSlot) for nwk_QfindSlot
+    nwk_frame.o(i.MRFI_RxCompleteISR) refers to mrfi.o(i.MRFI_Receive) for MRFI_Receive
+    nwk_frame.o(i.MRFI_RxCompleteISR) refers to nwk_frame.o(i.dispatchFrame) for dispatchFrame
+    nwk_frame.o(i.dispatchFrame) refers to memcmp.o(.text) for memcmp
+    nwk_frame.o(i.dispatchFrame) refers to nwk.o(i.nwk_isConnectionValid) for nwk_isConnectionValid
+    nwk_frame.o(i.dispatchFrame) refers to nwk_frame.o(.data) for sMyAddr
+    nwk_frame.o(i.dispatchFrame) refers to nwk_frame.o(.constdata) for func
+    nwk_frame.o(i.nwk_buildAckReqFrame) refers to nwk_frame.o(i.nwk_buildFrame) for nwk_buildFrame
+    nwk_frame.o(i.nwk_buildFrame) refers to nwk_qmgmt.o(i.nwk_QfindSlot) for nwk_QfindSlot
+    nwk_frame.o(i.nwk_buildFrame) refers to memmovea.o(.text) for __aeabi_memcpy
+    nwk_frame.o(i.nwk_buildFrame) refers to nwk_frame.o(.data) for sTRACTID
+    nwk_frame.o(i.nwk_frameInit) refers to nwk_globals.o(i.nwk_getMyAddress) for nwk_getMyAddress
+    nwk_frame.o(i.nwk_frameInit) refers to mrfi.o(i.MRFI_RandomByte) for MRFI_RandomByte
+    nwk_frame.o(i.nwk_frameInit) refers to nwk_frame.o(.data) for sMyTxType
+    nwk_frame.o(i.nwk_getMyRxType) refers to nwk_frame.o(.data) for sMyRxType
+    nwk_frame.o(i.nwk_retrieveFrame) refers to nwk_qmgmt.o(i.nwk_QfindOldest) for nwk_QfindOldest
+    nwk_frame.o(i.nwk_retrieveFrame) refers to nwk.o(i.nwk_getConnInfo) for nwk_getConnInfo
+    nwk_frame.o(i.nwk_retrieveFrame) refers to memmovea.o(.text) for __aeabi_memcpy
+    nwk_frame.o(i.nwk_retrieveFrame) refers to nwk_qmgmt.o(i.nwk_QadjustOrder) for nwk_QadjustOrder
+    nwk_frame.o(i.nwk_sendAckReply) refers to mrfi.o(i.MRFI_Transmit) for MRFI_Transmit
+    nwk_frame.o(i.nwk_sendAckReply) refers to nwk_frame.o(.data) for sMyTxType
+    nwk_frame.o(i.nwk_sendFrame) refers to mrfi.o(i.MRFI_Transmit) for MRFI_Transmit
+    nwk_frame.o(i.nwk_sendFrame) refers to nwk_frame.o(.data) for sMyTxType
+    nwk_frame.o(.constdata) refers to nwk_ping.o(i.nwk_processPing) for nwk_processPing
+    nwk_frame.o(.constdata) refers to nwk_link.o(i.nwk_processLink) for nwk_processLink
+    nwk_frame.o(.constdata) refers to nwk_join.o(i.nwk_processJoin) for nwk_processJoin
+    nwk_frame.o(.constdata) refers to nwk_security.o(i.nwk_processSecurity) for nwk_processSecurity
+    nwk_frame.o(.constdata) refers to nwk_freq.o(i.nwk_processFreq) for nwk_processFreq
+    nwk_frame.o(.constdata) refers to nwk_mgmt.o(i.nwk_processMgmt) for nwk_processMgmt
+    nwk_globals.o(i.nwk_getAPAddress) refers to memcmp.o(.text) for memcmp
+    nwk_globals.o(i.nwk_getAPAddress) refers to nwk_globals.o(.data) for sAPAddress
+    nwk_globals.o(i.nwk_getBCastAddress) refers to mrfi.o(.constdata) for mrfiBroadcastAddr
+    nwk_globals.o(i.nwk_getFWVersion) refers to nwk_globals.o(.constdata) for sVersionInfo
+    nwk_globals.o(i.nwk_getMyAddress) refers to nwk_globals.o(.data) for sRAMAddressIsSet
+    nwk_globals.o(i.nwk_getMyAddress) refers to nwk_globals.o(.constdata) for sMyROMAddress
+    nwk_globals.o(i.nwk_getProtocolVersion) refers to nwk_globals.o(.constdata) for sVersionInfo
+    nwk_globals.o(i.nwk_globalsInit) refers to nwk_globals.o(.data) for sAPAddress
+    nwk_globals.o(i.nwk_globalsInit) refers to nwk_globals.o(.constdata) for sMyROMAddress
+    nwk_globals.o(i.nwk_setAPAddress) refers to nwk_globals.o(.data) for sAPAddress
+    nwk_globals.o(i.nwk_setMyAddress) refers to nwk_globals.o(.data) for sRAMAddressIsSet
+    nwk_qmgmt.o(i.nwk_QInit) refers to memseta.o(.text) for __aeabi_memclr
+    nwk_qmgmt.o(i.nwk_QInit) refers to nwk_qmgmt.o(.bss) for sInFrameQ
+    nwk_qmgmt.o(i.nwk_QadjustOrder) refers to nwk_qmgmt.o(.bss) for sInFrameQ
+    nwk_qmgmt.o(i.nwk_QfindOldest) refers to nwk.o(i.nwk_getConnInfo) for nwk_getConnInfo
+    nwk_qmgmt.o(i.nwk_QfindOldest) refers to memcmp.o(.text) for memcmp
+    nwk_qmgmt.o(i.nwk_QfindOldest) refers to nwk_qmgmt.o(.bss) for sInFrameQ
+    nwk_qmgmt.o(i.nwk_QfindSlot) refers to nwk_qmgmt.o(i.nwk_QadjustOrder) for nwk_QadjustOrder
+    nwk_qmgmt.o(i.nwk_QfindSlot) refers to nwk_qmgmt.o(.bss) for sInFrameQ
+    nwk_qmgmt.o(i.nwk_getQ) refers to nwk_qmgmt.o(.bss) for sInFrameQ
+    nwk_ioctl.o(i.nwk_connectionControl) refers to nwk.o(i.nwk_getConnInfo) for nwk_getConnInfo
+    nwk_ioctl.o(i.nwk_connectionControl) refers to nwk.o(i.nwk_freeConnection) for nwk_freeConnection
+    nwk_ioctl.o(i.nwk_deviceAddress) refers to nwk_globals.o(i.nwk_getMyAddress) for nwk_getMyAddress
+    nwk_ioctl.o(i.nwk_deviceAddress) refers to nwk_globals.o(i.nwk_setMyAddress) for nwk_setMyAddress
+    nwk_ioctl.o(i.nwk_radioControl) refers to mrfi.o(i.MRFI_RxIdle) for MRFI_RxIdle
+    nwk_ioctl.o(i.nwk_radioControl) refers to mrfi.o(i.MRFI_Sleep) for MRFI_Sleep
+    nwk_ioctl.o(i.nwk_radioControl) refers to mrfi.o(i.MRFI_WakeUp) for MRFI_WakeUp
+    nwk_ioctl.o(i.nwk_radioControl) refers to nwk.o(i.nwk_getConnInfo) for nwk_getConnInfo
+    nwk_ioctl.o(i.nwk_radioControl) refers to mrfi.o(i.MRFI_Rssi) for MRFI_Rssi
+    nwk_ioctl.o(i.nwk_radioControl) refers to mrfi.o(i.MRFI_RxOn) for MRFI_RxOn
+    nwk_ioctl.o(i.nwk_rawReceive) refers to nwk_frame.o(i.nwk_retrieveFrame) for nwk_retrieveFrame
+    nwk_ioctl.o(i.nwk_rawSend) refers to nwk_frame.o(i.nwk_buildFrame) for nwk_buildFrame
+    nwk_ioctl.o(i.nwk_rawSend) refers to nwk_frame.o(i.nwk_sendFrame) for nwk_sendFrame
+    nwk_join.o(i.nwk_getJoinToken) refers to nwk_join.o(.data) for sJoinToken
+    nwk_join.o(i.nwk_join) refers to mrfi.o(i.MRFI_GetRadioState) for MRFI_GetRadioState
+    nwk_join.o(i.nwk_join) refers to nwk_globals.o(i.nwk_getBCastAddress) for nwk_getBCastAddress
+    nwk_join.o(i.nwk_join) refers to nwk.o(i.nwk_putNumObjectIntoMsg) for nwk_putNumObjectIntoMsg
+    nwk_join.o(i.nwk_join) refers to nwk_globals.o(i.nwk_getProtocolVersion) for nwk_getProtocolVersion
+    nwk_join.o(i.nwk_join) refers to nwk_api.o(i.SMPL_Ioctl) for SMPL_Ioctl
+    nwk_join.o(i.nwk_join) refers to mrfi.o(i.MRFI_WakeUp) for MRFI_WakeUp
+    nwk_join.o(i.nwk_join) refers to mrfi.o(i.MRFI_RxOn) for MRFI_RxOn
+    nwk_join.o(i.nwk_join) refers to mrfi.o(i.MRFI_ReplyDelay) for MRFI_ReplyDelay
+    nwk_join.o(i.nwk_join) refers to delay.o(i.Sys_delay_ms) for Sys_delay_ms
+    nwk_join.o(i.nwk_join) refers to mrfi.o(i.MRFI_Sleep) for MRFI_Sleep
+    nwk_join.o(i.nwk_join) refers to mrfi.o(i.MRFI_RxIdle) for MRFI_RxIdle
+    nwk_join.o(i.nwk_join) refers to nwk_link.o(i.nwk_setLinkToken) for nwk_setLinkToken
+    nwk_join.o(i.nwk_join) refers to nwk_globals.o(i.nwk_setAPAddress) for nwk_setAPAddress
+    nwk_join.o(i.nwk_join) refers to nwk_join.o(.data) for sJoinToken
+    nwk_join.o(i.nwk_joinInit) refers to mrfi.o(i.MRFI_RandomByte) for MRFI_RandomByte
+    nwk_join.o(i.nwk_joinInit) refers to nwk_join.o(.data) for sJoinToken
+    nwk_join.o(i.nwk_processJoin) refers to nwk.o(i.nwk_isValidReply) for nwk_isValidReply
+    nwk_join.o(i.nwk_processJoin) refers to mrfi.o(i.MRFI_PostKillSem) for MRFI_PostKillSem
+    nwk_join.o(i.nwk_processJoin) refers to nwk_join.o(.data) for sTid
+    nwk_join.o(i.nwk_setJoinToken) refers to nwk_join.o(.data) for sJoinToken
+    nwk_link.o(i.handleLinkRequest) refers to nwk_link.o(i.smpl_send_link_reply) for smpl_send_link_reply
+    nwk_link.o(i.nwk_getLinkToken) refers to nwk_link.o(.data) for sLinkToken
+    nwk_link.o(i.nwk_getLocalLinkID) refers to nwk_link.o(i.nwk_setListenContext) for nwk_setListenContext
+    nwk_link.o(i.nwk_getLocalLinkID) refers to nwk_link.o(.data) for sNumLinkers
+    nwk_link.o(i.nwk_link) refers to nwk.o(i.nwk_getNextConnection) for nwk_getNextConnection
+    nwk_link.o(i.nwk_link) refers to nwk.o(i.nwk_allocateLocalRxPort) for nwk_allocateLocalRxPort
+    nwk_link.o(i.nwk_link) refers to nwk.o(i.nwk_freeConnection) for nwk_freeConnection
+    nwk_link.o(i.nwk_link) refers to nwk_globals.o(i.nwk_getBCastAddress) for nwk_getBCastAddress
+    nwk_link.o(i.nwk_link) refers to nwk.o(i.nwk_putNumObjectIntoMsg) for nwk_putNumObjectIntoMsg
+    nwk_link.o(i.nwk_link) refers to nwk_frame.o(i.nwk_getMyRxType) for nwk_getMyRxType
+    nwk_link.o(i.nwk_link) refers to nwk_globals.o(i.nwk_getProtocolVersion) for nwk_getProtocolVersion
+    nwk_link.o(i.nwk_link) refers to nwk_api.o(i.SMPL_Ioctl) for SMPL_Ioctl
+    nwk_link.o(i.nwk_link) refers to mrfi.o(i.MRFI_GetRadioState) for MRFI_GetRadioState
+    nwk_link.o(i.nwk_link) refers to mrfi.o(i.MRFI_WakeUp) for MRFI_WakeUp
+    nwk_link.o(i.nwk_link) refers to mrfi.o(i.MRFI_RxOn) for MRFI_RxOn
+    nwk_link.o(i.nwk_link) refers to mrfi.o(i.MRFI_ReplyDelay) for MRFI_ReplyDelay
+    nwk_link.o(i.nwk_link) refers to delay.o(i.Sys_delay_ms) for Sys_delay_ms
+    nwk_link.o(i.nwk_link) refers to mrfi.o(i.MRFI_Sleep) for MRFI_Sleep
+    nwk_link.o(i.nwk_link) refers to mrfi.o(i.MRFI_RxIdle) for MRFI_RxIdle
+    nwk_link.o(i.nwk_link) refers to nwk_link.o(.data) for sLinkToken
+    nwk_link.o(i.nwk_linkInit) refers to mrfi.o(i.MRFI_RandomByte) for MRFI_RandomByte
+    nwk_link.o(i.nwk_linkInit) refers to nwk_link.o(.data) for sLinkToken
+    nwk_link.o(i.nwk_processLink) refers to nwk.o(i.nwk_isValidReply) for nwk_isValidReply
+    nwk_link.o(i.nwk_processLink) refers to mrfi.o(i.MRFI_PostKillSem) for MRFI_PostKillSem
+    nwk_link.o(i.nwk_processLink) refers to nwk_link.o(i.handleLinkRequest) for handleLinkRequest
+    nwk_link.o(i.nwk_processLink) refers to nwk_link.o(.data) for sTid
+    nwk_link.o(i.nwk_setLinkToken) refers to nwk_link.o(.data) for sLinkToken
+    nwk_link.o(i.nwk_setListenContext) refers to nwk_link.o(.data) for sListenActive
+    nwk_link.o(i.smpl_send_link_reply) refers to nwk_globals.o(i.nwk_getProtocolVersion) for nwk_getProtocolVersion
+    nwk_link.o(i.smpl_send_link_reply) refers to nwk.o(i.nwk_getNumObjectFromMsg) for nwk_getNumObjectFromMsg
+    nwk_link.o(i.smpl_send_link_reply) refers to nwk.o(i.nwk_isLinkDuplicate) for nwk_isLinkDuplicate
+    nwk_link.o(i.smpl_send_link_reply) refers to nwk_frame.o(i.nwk_getMyRxType) for nwk_getMyRxType
+    nwk_link.o(i.smpl_send_link_reply) refers to nwk_frame.o(i.nwk_buildFrame) for nwk_buildFrame
+    nwk_link.o(i.smpl_send_link_reply) refers to nwk_frame.o(i.nwk_sendFrame) for nwk_sendFrame
+    nwk_link.o(i.smpl_send_link_reply) refers to nwk.o(i.nwk_getNextConnection) for nwk_getNextConnection
+    nwk_link.o(i.smpl_send_link_reply) refers to nwk.o(i.nwk_allocateLocalRxPort) for nwk_allocateLocalRxPort
+    nwk_link.o(i.smpl_send_link_reply) refers to nwk.o(i.nwk_freeConnection) for nwk_freeConnection
+    nwk_link.o(i.smpl_send_link_reply) refers to nwk_link.o(.data) for sLinkToken
+    nwk_mgmt.o(i.nwk_mgmtInit) refers to mrfi.o(i.MRFI_RandomByte) for MRFI_RandomByte
+    nwk_mgmt.o(i.nwk_mgmtInit) refers to nwk_mgmt.o(.data) for sTid
+    nwk_mgmt.o(i.nwk_poll) refers to nwk_globals.o(i.nwk_getAPAddress) for nwk_getAPAddress
+    nwk_mgmt.o(i.nwk_poll) refers to nwk_api.o(i.SMPL_Ioctl) for SMPL_Ioctl
+    nwk_mgmt.o(i.nwk_poll) refers to nwk_mgmt.o(.data) for sTid
+    nwk_mgmt.o(i.nwk_processMgmt) refers to nwk.o(i.nwk_isValidReply) for nwk_isValidReply
+    nwk_mgmt.o(i.nwk_processMgmt) refers to mrfi.o(i.MRFI_PostKillSem) for MRFI_PostKillSem
+    nwk_mgmt.o(i.nwk_processMgmt) refers to nwk_globals.o(i.nwk_getMyAddress) for nwk_getMyAddress
+    nwk_mgmt.o(i.nwk_processMgmt) refers to memcmp.o(.text) for memcmp
+    nwk_mgmt.o(i.nwk_processMgmt) refers to nwk_mgmt.o(i.smpl_send_mgmt_reply) for smpl_send_mgmt_reply
+    nwk_mgmt.o(i.nwk_processMgmt) refers to nwk_mgmt.o(.data) for sTid
+    nwk_ping.o(i.handlePingRequest) refers to nwk_ping.o(i.smpl_send_ping_reply) for smpl_send_ping_reply
+    nwk_ping.o(i.nwk_ping) refers to nwk.o(i.nwk_getConnInfo) for nwk_getConnInfo
+    nwk_ping.o(i.nwk_ping) refers to mrfi.o(i.MRFI_GetRadioState) for MRFI_GetRadioState
+    nwk_ping.o(i.nwk_ping) refers to nwk_api.o(i.SMPL_Ioctl) for SMPL_Ioctl
+    nwk_ping.o(i.nwk_ping) refers to mrfi.o(i.MRFI_WakeUp) for MRFI_WakeUp
+    nwk_ping.o(i.nwk_ping) refers to mrfi.o(i.MRFI_RxOn) for MRFI_RxOn
+    nwk_ping.o(i.nwk_ping) refers to mrfi.o(i.MRFI_ReplyDelay) for MRFI_ReplyDelay
+    nwk_ping.o(i.nwk_ping) refers to delay.o(i.Sys_delay_ms) for Sys_delay_ms
+    nwk_ping.o(i.nwk_ping) refers to mrfi.o(i.MRFI_Sleep) for MRFI_Sleep
+    nwk_ping.o(i.nwk_ping) refers to mrfi.o(i.MRFI_RxIdle) for MRFI_RxIdle
+    nwk_ping.o(i.nwk_ping) refers to nwk_ping.o(.data) for sTid
+    nwk_ping.o(i.nwk_pingInit) refers to mrfi.o(i.MRFI_RandomByte) for MRFI_RandomByte
+    nwk_ping.o(i.nwk_pingInit) refers to nwk_ping.o(.data) for sTid
+    nwk_ping.o(i.nwk_processPing) refers to nwk.o(i.nwk_isValidReply) for nwk_isValidReply
+    nwk_ping.o(i.nwk_processPing) refers to mrfi.o(i.MRFI_PostKillSem) for MRFI_PostKillSem
+    nwk_ping.o(i.nwk_processPing) refers to nwk_ping.o(i.handlePingRequest) for handlePingRequest
+    nwk_ping.o(i.nwk_processPing) refers to nwk_ping.o(.data) for sTid
+    nwk_ping.o(i.smpl_send_ping_reply) refers to nwk_frame.o(i.nwk_buildFrame) for nwk_buildFrame
+    nwk_ping.o(i.smpl_send_ping_reply) refers to nwk_frame.o(i.nwk_sendFrame) for nwk_sendFrame
+    startup_stm32f10x_md_vl.o(RESET) refers to startup_stm32f10x_md_vl.o(STACK) for __initial_sp
+    startup_stm32f10x_md_vl.o(RESET) refers to startup_stm32f10x_md_vl.o(.text) for Reset_Handler
+    startup_stm32f10x_md_vl.o(RESET) refers to mrfi.o(i.EXTI1_IRQHandler) for EXTI1_IRQHandler
+    startup_stm32f10x_md_vl.o(.text) refers to system_stm32f10x.o(i.SystemInit) for SystemInit
+    startup_stm32f10x_md_vl.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    system_stm32f10x.o(i.SetSysClock) refers to system_stm32f10x.o(i.SetSysClockTo72) for SetSysClockTo72
+    system_stm32f10x.o(i.SystemCoreClockUpdate) refers to system_stm32f10x.o(.data) for SystemCoreClock
+    system_stm32f10x.o(i.SystemCoreClockUpdate) refers to system_stm32f10x.o(.constdata) for AHBPrescTable
+    system_stm32f10x.o(i.SystemInit) refers to system_stm32f10x.o(i.SetSysClock) for SetSysClock
+    stm32f10x_gpio.o(i.GPIO_AFIODeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_gpio.o(i.GPIO_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_rcc.o(i.RCC_GetClocksFreq) refers to stm32f10x_rcc.o(.constdata) for APBAHBPrescTable
+    stm32f10x_rcc.o(i.RCC_GetClocksFreq) refers to stm32f10x_rcc.o(.data) for ADCPrescTable
+    stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp) refers to stm32f10x_rcc.o(i.RCC_GetFlagStatus) for RCC_GetFlagStatus
+    stm32f10x_spi.o(i.I2S_Init) refers to stm32f10x_rcc.o(i.RCC_GetClocksFreq) for RCC_GetClocksFreq
+    stm32f10x_spi.o(i.SPI_I2S_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_spi.o(i.SPI_I2S_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    stm32f10x_usart.o(i.USART_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_usart.o(i.USART_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    stm32f10x_usart.o(i.USART_Init) refers to stm32f10x_rcc.o(i.RCC_GetClocksFreq) for RCC_GetClocksFreq
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_stm32f10x_md_vl.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f10x_md_vl.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main_manyeds_autoack.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main_manyeds_autoack.o(i.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing bsp.o(i.BSP_RecvUSART), (28 bytes).
+    Removing bsp.o(i.BSP_SendUSART), (30 bytes).
+    Removing bsp.o(i.__bsp_debug_hex), (18 bytes).
+    Removing bsp.o(i.__bsp_debug_hex_1), (34 bytes).
+    Removing bsp.o(i.__bsp_debug_hex_ln), (24 bytes).
+    Removing bsp.o(i._system_pre_init), (4 bytes).
+    Removing bsp.o(i.fputc), (14 bytes).
+    Removing bsp.o(i.gpioPinHigh), (22 bytes).
+    Removing bsp.o(i.gpioPinLow), (22 bytes).
+    Removing bsp.o(i.gpioPinOut), (30 bytes).
+    Removing delay.o(i.Sys_delay_us), (76 bytes).
+    Removing mrfi.o(i.MRFI_CompleteTxPrep), (2 bytes).
+    Removing mrfi.o(i.MRFI_DisableRxAddrFilter), (24 bytes).
+    Removing nwk.o(i.nwk_NVObj), (6 bytes).
+    Removing nwk.o(i.nwk_checkAppMsgTID), (36 bytes).
+    Removing nwk.o(i.nwk_findAddressMatch), (52 bytes).
+    Removing nwk.o(i.nwk_findPeer), (64 bytes).
+    Removing nwk_api.o(i.SMPL_LinkListen), (104 bytes).
+    Removing nwk_api.o(i.SMPL_Receive), (72 bytes).
+    Removing nwk_api.o(i.SMPL_Send), (22 bytes).
+    Removing nwk_globals.o(i.nwk_getAPAddress), (32 bytes).
+    Removing nwk_qmgmt.o(i.nwk_getQ), (24 bytes).
+    Removing nwk_join.o(i.nwk_getJoinToken), (16 bytes).
+    Removing nwk_join.o(i.nwk_setJoinToken), (12 bytes).
+    Removing nwk_link.o(i.nwk_getLinkToken), (16 bytes).
+    Removing nwk_link.o(i.nwk_getLocalLinkID), (100 bytes).
+    Removing nwk_link.o(i.nwk_setListenContext), (20 bytes).
+    Removing nwk_mgmt.o(i.nwk_poll), (112 bytes).
+    Removing nwk_ping.o(i.nwk_ping), (204 bytes).
+    Removing nwk_pll.o(i.nwk_processPLL), (6 bytes).
+    Removing startup_stm32f10x_md_vl.o(HEAP), (512 bytes).
+    Removing system_stm32f10x.o(i.SystemCoreClockUpdate), (156 bytes).
+    Removing system_stm32f10x.o(.constdata), (16 bytes).
+    Removing misc.o(i.NVIC_PriorityGroupConfig), (20 bytes).
+    Removing misc.o(i.NVIC_SetVectorTable), (20 bytes).
+    Removing misc.o(i.NVIC_SystemLPConfig), (32 bytes).
+    Removing stm32f10x_dbgmcu.o(i.DBGMCU_GetDEVID), (16 bytes).
+    Removing stm32f10x_dbgmcu.o(i.DBGMCU_GetREVID), (12 bytes).
+    Removing stm32f10x_exti.o(i.EXTI_ClearFlag), (12 bytes).
+    Removing stm32f10x_exti.o(i.EXTI_ClearITPendingBit), (12 bytes).
+    Removing stm32f10x_exti.o(i.EXTI_DeInit), (36 bytes).
+    Removing stm32f10x_exti.o(i.EXTI_GenerateSWInterrupt), (16 bytes).
+    Removing stm32f10x_exti.o(i.EXTI_GetFlagStatus), (24 bytes).
+    Removing stm32f10x_exti.o(i.EXTI_GetITStatus), (40 bytes).
+    Removing stm32f10x_exti.o(i.EXTI_StructInit), (16 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_AFIODeInit), (20 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_DeInit), (200 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ETH_MediaInterfaceConfig), (12 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_EventOutputCmd), (12 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_EventOutputConfig), (32 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_Init), (278 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_PinLockConfig), (18 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_PinRemapConfig), (144 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadInputData), (8 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadInputDataBit), (18 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadOutputData), (8 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadOutputDataBit), (18 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ResetBits), (4 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_SetBits), (4 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_StructInit), (16 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_Write), (4 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_WriteBit), (10 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ADCCLKConfig), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd), (32 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd), (32 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_AdjustHSICalibrationValue), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_BackupResetCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClearFlag), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClearITPendingBit), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClockSecuritySystemCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetITStatus), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_HSICmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ITConfig), (32 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_LSEConfig), (52 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_MCOConfig), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_RTCCLKCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_RTCCLKConfig), (16 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_USBCLKConfig), (12 bytes).
+    Removing stm32f10x_spi.o(i.I2S_Cmd), (24 bytes).
+    Removing stm32f10x_spi.o(i.I2S_Init), (232 bytes).
+    Removing stm32f10x_spi.o(i.I2S_StructInit), (20 bytes).
+    Removing stm32f10x_spi.o(i.SPI_BiDirectionalLineConfig), (28 bytes).
+    Removing stm32f10x_spi.o(i.SPI_CalculateCRC), (24 bytes).
+    Removing stm32f10x_spi.o(i.SPI_DataSizeConfig), (18 bytes).
+    Removing stm32f10x_spi.o(i.SPI_GetCRC), (16 bytes).
+    Removing stm32f10x_spi.o(i.SPI_GetCRCPolynomial), (6 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_ClearFlag), (6 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_ClearITPendingBit), (20 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_DMACmd), (18 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_DeInit), (88 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_GetFlagStatus), (18 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_GetITStatus), (52 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_ITConfig), (32 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_ReceiveData), (6 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_SendData), (4 bytes).
+    Removing stm32f10x_spi.o(i.SPI_NSSInternalSoftwareConfig), (30 bytes).
+    Removing stm32f10x_spi.o(i.SPI_SSOutputCmd), (24 bytes).
+    Removing stm32f10x_spi.o(i.SPI_StructInit), (24 bytes).
+    Removing stm32f10x_spi.o(i.SPI_TransmitCRC), (10 bytes).
+    Removing stm32f10x_usart.o(i.USART_ClearFlag), (18 bytes).
+    Removing stm32f10x_usart.o(i.USART_ClearITPendingBit), (30 bytes).
+    Removing stm32f10x_usart.o(i.USART_ClockInit), (34 bytes).
+    Removing stm32f10x_usart.o(i.USART_ClockStructInit), (12 bytes).
+    Removing stm32f10x_usart.o(i.USART_DMACmd), (18 bytes).
+    Removing stm32f10x_usart.o(i.USART_DeInit), (156 bytes).
+    Removing stm32f10x_usart.o(i.USART_GetITStatus), (84 bytes).
+    Removing stm32f10x_usart.o(i.USART_HalfDuplexCmd), (24 bytes).
+    Removing stm32f10x_usart.o(i.USART_ITConfig), (74 bytes).
+    Removing stm32f10x_usart.o(i.USART_IrDACmd), (24 bytes).
+    Removing stm32f10x_usart.o(i.USART_IrDAConfig), (18 bytes).
+    Removing stm32f10x_usart.o(i.USART_LINBreakDetectLengthConfig), (18 bytes).
+    Removing stm32f10x_usart.o(i.USART_LINCmd), (24 bytes).
+    Removing stm32f10x_usart.o(i.USART_OneBitMethodCmd), (24 bytes).
+    Removing stm32f10x_usart.o(i.USART_OverSampling8Cmd), (22 bytes).
+    Removing stm32f10x_usart.o(i.USART_ReceiveData), (10 bytes).
+    Removing stm32f10x_usart.o(i.USART_ReceiverWakeUpCmd), (24 bytes).
+    Removing stm32f10x_usart.o(i.USART_SendBreak), (10 bytes).
+    Removing stm32f10x_usart.o(i.USART_SetAddress), (18 bytes).
+    Removing stm32f10x_usart.o(i.USART_SetGuardTime), (16 bytes).
+    Removing stm32f10x_usart.o(i.USART_SetPrescaler), (16 bytes).
+    Removing stm32f10x_usart.o(i.USART_SmartCardCmd), (24 bytes).
+    Removing stm32f10x_usart.o(i.USART_SmartCardNACKCmd), (24 bytes).
+    Removing stm32f10x_usart.o(i.USART_StructInit), (24 bytes).
+    Removing stm32f10x_usart.o(i.USART_WakeUpConfig), (18 bytes).
+    Removing stm32f10x_crc.o(i.CRC_CalcBlockCRC), (36 bytes).
+    Removing stm32f10x_crc.o(i.CRC_GetIDRegister), (12 bytes).
+    Removing stm32f10x_crc.o(i.CRC_SetIDRegister), (12 bytes).
+
+127 unused section(s) (total 4836 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/string/memcmp.c         0x00000000   Number         0  memcmp.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memmoveb.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memmovea.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ..\..\..\..\..\Components\bsp\boards\STM32\startup_stm32f10x_md_vl.s 0x00000000   Number         0  startup_stm32f10x_md_vl.o ABSOLUTE
+    ..\..\..\..\..\Components\bsp\boards\STM32\system_stm32f10x.c 0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
+    ..\..\..\..\..\Components\bsp\bsp.c      0x00000000   Number         0  bsp.o ABSOLUTE
+    ..\..\..\..\..\Components\bsp\delay.c    0x00000000   Number         0  delay.o ABSOLUTE
+    ..\..\..\..\..\Components\mrfi\mrfi.c    0x00000000   Number         0  mrfi.o ABSOLUTE
+    ..\..\..\..\..\Components\simpliciti\nwk\nwk.c 0x00000000   Number         0  nwk.o ABSOLUTE
+    ..\..\..\..\..\Components\simpliciti\nwk\nwk_QMgmt.c 0x00000000   Number         0  nwk_qmgmt.o ABSOLUTE
+    ..\..\..\..\..\Components\simpliciti\nwk\nwk_api.c 0x00000000   Number         0  nwk_api.o ABSOLUTE
+    ..\..\..\..\..\Components\simpliciti\nwk\nwk_frame.c 0x00000000   Number         0  nwk_frame.o ABSOLUTE
+    ..\..\..\..\..\Components\simpliciti\nwk\nwk_globals.c 0x00000000   Number         0  nwk_globals.o ABSOLUTE
+    ..\..\..\..\..\Components\simpliciti\nwk_applications\nwk_freq.c 0x00000000   Number         0  nwk_freq.o ABSOLUTE
+    ..\..\..\..\..\Components\simpliciti\nwk_applications\nwk_ioctl.c 0x00000000   Number         0  nwk_ioctl.o ABSOLUTE
+    ..\..\..\..\..\Components\simpliciti\nwk_applications\nwk_join.c 0x00000000   Number         0  nwk_join.o ABSOLUTE
+    ..\..\..\..\..\Components\simpliciti\nwk_applications\nwk_link.c 0x00000000   Number         0  nwk_link.o ABSOLUTE
+    ..\..\..\..\..\Components\simpliciti\nwk_applications\nwk_mgmt.c 0x00000000   Number         0  nwk_mgmt.o ABSOLUTE
+    ..\..\..\..\..\Components\simpliciti\nwk_applications\nwk_ping.c 0x00000000   Number         0  nwk_ping.o ABSOLUTE
+    ..\..\..\..\..\Components\simpliciti\nwk_applications\nwk_pll.c 0x00000000   Number         0  nwk_pll.o ABSOLUTE
+    ..\..\..\..\..\Components\simpliciti\nwk_applications\nwk_security.c 0x00000000   Number         0  nwk_security.o ABSOLUTE
+    ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c 0x00000000   Number         0  misc.o ABSOLUTE
+    ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.c 0x00000000   Number         0  stm32f10x_crc.o ABSOLUTE
+    ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.c 0x00000000   Number         0  stm32f10x_dbgmcu.o ABSOLUTE
+    ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c 0x00000000   Number         0  stm32f10x_exti.o ABSOLUTE
+    ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c 0x00000000   Number         0  stm32f10x_gpio.o ABSOLUTE
+    ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c 0x00000000   Number         0  stm32f10x_rcc.o ABSOLUTE
+    ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c 0x00000000   Number         0  stm32f10x_spi.o ABSOLUTE
+    ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c 0x00000000   Number         0  stm32f10x_usart.o ABSOLUTE
+    ..\..\..\Applications\main_manyEDs_autoack.c 0x00000000   Number         0  main_manyeds_autoack.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    RESET                                    0x08000000   Section      288  startup_stm32f10x_md_vl.o(RESET)
+    .ARM.Collect$$$$00000000                 0x08000120   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x08000120   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x08000124   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x08000128   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x08000128   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x08000128   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x08000130   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x08000130   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x08000130   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x08000130   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x08000134   Section       36  startup_stm32f10x_md_vl.o(.text)
+    .text                                    0x08000158   Section        0  memmovea.o(.text)
+    .text                                    0x08000198   Section        0  memseta.o(.text)
+    .text                                    0x080001bc   Section        0  memcmp.o(.text)
+    .text                                    0x080001d8   Section       36  init.o(.text)
+    i.BSP_Delay                              0x080001fc   Section        0  bsp.o(i.BSP_Delay)
+    i.BSP_Init                               0x08000200   Section        0  bsp.o(i.BSP_Init)
+    i.BSP_InitBoard                          0x0800025c   Section        0  bsp.o(i.BSP_InitBoard)
+    i.BSP_InitButtons                        0x08000280   Section        0  bsp.o(i.BSP_InitButtons)
+    i.BSP_InitDrivers                        0x0800028c   Section        0  bsp.o(i.BSP_InitDrivers)
+    i.BSP_InitLeds                           0x08000298   Section        0  bsp.o(i.BSP_InitLeds)
+    i.BSP_InitSPI                            0x080002d0   Section        0  bsp.o(i.BSP_InitSPI)
+    i.BSP_InitUSART                          0x08000390   Section        0  bsp.o(i.BSP_InitUSART)
+    i.CRC_CalcCRC                            0x0800040c   Section        0  stm32f10x_crc.o(i.CRC_CalcCRC)
+    i.CRC_GetCRC                             0x0800041c   Section        0  stm32f10x_crc.o(i.CRC_GetCRC)
+    i.CRC_ResetDR                            0x08000428   Section        0  stm32f10x_crc.o(i.CRC_ResetDR)
+    i.DBGMCU_Config                          0x08000434   Section        0  stm32f10x_dbgmcu.o(i.DBGMCU_Config)
+    i.EXTI1_IRQHandler                       0x08000454   Section        0  mrfi.o(i.EXTI1_IRQHandler)
+    i.EXTI_Init                              0x080004b0   Section        0  stm32f10x_exti.o(i.EXTI_Init)
+    i.GPIO_EXTILineConfig                    0x08000544   Section        0  stm32f10x_gpio.o(i.GPIO_EXTILineConfig)
+    i.MRFI_DelayMs                           0x08000584   Section        0  mrfi.o(i.MRFI_DelayMs)
+    i.MRFI_EnableRxAddrFilter                0x0800059c   Section        0  mrfi.o(i.MRFI_EnableRxAddrFilter)
+    i.MRFI_GetRadioState                     0x08000618   Section        0  mrfi.o(i.MRFI_GetRadioState)
+    i.MRFI_GpioIsr                           0x08000624   Section        0  mrfi.o(i.MRFI_GpioIsr)
+    i.MRFI_Init                              0x08000650   Section        0  mrfi.o(i.MRFI_Init)
+    i.MRFI_PostKillSem                       0x080008a8   Section        0  mrfi.o(i.MRFI_PostKillSem)
+    i.MRFI_PrepareToTx                       0x080008c0   Section        0  mrfi.o(i.MRFI_PrepareToTx)
+    MRFI_PrepareToTx                         0x080008c1   Thumb Code    26  mrfi.o(i.MRFI_PrepareToTx)
+    i.MRFI_RandomByte                        0x080008dc   Section        0  mrfi.o(i.MRFI_RandomByte)
+    i.MRFI_Receive                           0x080008f4   Section        0  mrfi.o(i.MRFI_Receive)
+    i.MRFI_ReplyDelay                        0x08000908   Section        0  mrfi.o(i.MRFI_ReplyDelay)
+    i.MRFI_Rssi                              0x08000980   Section        0  mrfi.o(i.MRFI_Rssi)
+    i.MRFI_RxAddrIsFiltered                  0x08000a14   Section        0  mrfi.o(i.MRFI_RxAddrIsFiltered)
+    i.MRFI_RxCompleteISR                     0x08000a68   Section        0  nwk_frame.o(i.MRFI_RxCompleteISR)
+    i.MRFI_RxIdle                            0x08000a84   Section        0  mrfi.o(i.MRFI_RxIdle)
+    i.MRFI_RxOn                              0x08000af8   Section        0  mrfi.o(i.MRFI_RxOn)
+    i.MRFI_SPI_CSN_IS_HIGH                   0x08000b6c   Section        0  mrfi.o(i.MRFI_SPI_CSN_IS_HIGH)
+    i.MRFI_SPI_DRIVE_CSN_HIGH                0x08000b7c   Section        0  mrfi.o(i.MRFI_SPI_DRIVE_CSN_HIGH)
+    i.MRFI_SPI_DRIVE_CSN_LOW                 0x08000b88   Section        0  mrfi.o(i.MRFI_SPI_DRIVE_CSN_LOW)
+    i.MRFI_SetLogicalChannel                 0x08000b94   Section        0  mrfi.o(i.MRFI_SetLogicalChannel)
+    i.MRFI_SetRFPwr                          0x08000c10   Section        0  mrfi.o(i.MRFI_SetRFPwr)
+    i.MRFI_SetRxAddrFilter                   0x08000c8c   Section        0  mrfi.o(i.MRFI_SetRxAddrFilter)
+    i.MRFI_Sleep                             0x08000cc4   Section        0  mrfi.o(i.MRFI_Sleep)
+    i.MRFI_Transmit                          0x08000cfc   Section        0  mrfi.o(i.MRFI_Transmit)
+    i.MRFI_WakeUp                            0x08000eb8   Section        0  mrfi.o(i.MRFI_WakeUp)
+    i.Mrfi_CalculateRssi                     0x08000efc   Section        0  mrfi.o(i.Mrfi_CalculateRssi)
+    Mrfi_CalculateRssi                       0x08000efd   Thumb Code    48  mrfi.o(i.Mrfi_CalculateRssi)
+    i.Mrfi_DelayUsec                         0x08000f2c   Section        0  mrfi.o(i.Mrfi_DelayUsec)
+    Mrfi_DelayUsec                           0x08000f2d   Thumb Code    38  mrfi.o(i.Mrfi_DelayUsec)
+    i.Mrfi_DelayUsecLong                     0x08000f52   Section        0  mrfi.o(i.Mrfi_DelayUsecLong)
+    i.Mrfi_DelayUsecSem                      0x08000ff8   Section        0  mrfi.o(i.Mrfi_DelayUsecSem)
+    Mrfi_DelayUsecSem                        0x08000ff9   Thumb Code    72  mrfi.o(i.Mrfi_DelayUsecSem)
+    i.Mrfi_RandomBackoffDelay                0x08001044   Section        0  mrfi.o(i.Mrfi_RandomBackoffDelay)
+    Mrfi_RandomBackoffDelay                  0x08001045   Thumb Code    34  mrfi.o(i.Mrfi_RandomBackoffDelay)
+    i.Mrfi_RxModeOff                         0x0800106c   Section        0  mrfi.o(i.Mrfi_RxModeOff)
+    Mrfi_RxModeOff                           0x0800106d   Thumb Code    60  mrfi.o(i.Mrfi_RxModeOff)
+    i.Mrfi_RxModeOn                          0x080010b0   Section        0  mrfi.o(i.Mrfi_RxModeOn)
+    Mrfi_RxModeOn                            0x080010b1   Thumb Code    40  mrfi.o(i.Mrfi_RxModeOn)
+    i.Mrfi_SyncPinRxIsr                      0x080010e0   Section        0  mrfi.o(i.Mrfi_SyncPinRxIsr)
+    Mrfi_SyncPinRxIsr                        0x080010e1   Thumb Code   304  mrfi.o(i.Mrfi_SyncPinRxIsr)
+    i.NVIC_Init                              0x08001260   Section        0  misc.o(i.NVIC_Init)
+    i.RCC_AHBPeriphClockCmd                  0x080012d0   Section        0  stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd)
+    i.RCC_APB1PeriphClockCmd                 0x080012f0   Section        0  stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd)
+    i.RCC_APB2PeriphClockCmd                 0x08001310   Section        0  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
+    i.RCC_Configuration                      0x08001330   Section        0  bsp.o(i.RCC_Configuration)
+    i.RCC_DeInit                             0x080013a0   Section        0  stm32f10x_rcc.o(i.RCC_DeInit)
+    i.RCC_GetClocksFreq                      0x080013ec   Section        0  stm32f10x_rcc.o(i.RCC_GetClocksFreq)
+    i.RCC_GetFlagStatus                      0x080014c0   Section        0  stm32f10x_rcc.o(i.RCC_GetFlagStatus)
+    i.RCC_GetSYSCLKSource                    0x080014fc   Section        0  stm32f10x_rcc.o(i.RCC_GetSYSCLKSource)
+    i.RCC_HCLKConfig                         0x0800150c   Section        0  stm32f10x_rcc.o(i.RCC_HCLKConfig)
+    i.RCC_HSEConfig                          0x08001524   Section        0  stm32f10x_rcc.o(i.RCC_HSEConfig)
+    i.RCC_LSICmd                             0x08001570   Section        0  stm32f10x_rcc.o(i.RCC_LSICmd)
+    i.RCC_PCLK1Config                        0x0800157c   Section        0  stm32f10x_rcc.o(i.RCC_PCLK1Config)
+    i.RCC_PCLK2Config                        0x08001594   Section        0  stm32f10x_rcc.o(i.RCC_PCLK2Config)
+    i.RCC_PLLCmd                             0x080015ac   Section        0  stm32f10x_rcc.o(i.RCC_PLLCmd)
+    i.RCC_PLLConfig                          0x080015b8   Section        0  stm32f10x_rcc.o(i.RCC_PLLConfig)
+    i.RCC_SYSCLKConfig                       0x080015d4   Section        0  stm32f10x_rcc.o(i.RCC_SYSCLKConfig)
+    i.RCC_WaitForHSEStartUp                  0x080015ec   Section        0  stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp)
+    i.SMPL_Init                              0x08001624   Section        0  nwk_api.o(i.SMPL_Init)
+    i.SMPL_Ioctl                             0x08001668   Section        0  nwk_api.o(i.SMPL_Ioctl)
+    i.SMPL_Link                              0x0800171c   Section        0  nwk_api.o(i.SMPL_Link)
+    i.SMPL_SendOpt                           0x08001728   Section        0  nwk_api.o(i.SMPL_SendOpt)
+    i.SPI_Cmd                                0x08001828   Section        0  stm32f10x_spi.o(i.SPI_Cmd)
+    i.SPI_Init                               0x08001840   Section        0  stm32f10x_spi.o(i.SPI_Init)
+    i.SetSysClock                            0x0800187c   Section        0  system_stm32f10x.o(i.SetSysClock)
+    SetSysClock                              0x0800187d   Thumb Code     8  system_stm32f10x.o(i.SetSysClock)
+    i.SetSysClockTo72                        0x08001884   Section        0  system_stm32f10x.o(i.SetSysClockTo72)
+    SetSysClockTo72                          0x08001885   Thumb Code   214  system_stm32f10x.o(i.SetSysClockTo72)
+    i.SysTick_CLKSourceConfig                0x08001964   Section        0  misc.o(i.SysTick_CLKSourceConfig)
+    i.Sys_delay_init                         0x0800198c   Section        0  delay.o(i.Sys_delay_init)
+    i.Sys_delay_ms                           0x080019d0   Section        0  delay.o(i.Sys_delay_ms)
+    i.SystemInit                             0x08001a1c   Section        0  system_stm32f10x.o(i.SystemInit)
+    i.USART_Cmd                              0x08001a7c   Section        0  stm32f10x_usart.o(i.USART_Cmd)
+    i.USART_GetFlagStatus                    0x08001a94   Section        0  stm32f10x_usart.o(i.USART_GetFlagStatus)
+    i.USART_Init                             0x08001ab0   Section        0  stm32f10x_usart.o(i.USART_Init)
+    i.USART_SendData                         0x08001b88   Section        0  stm32f10x_usart.o(i.USART_SendData)
+    i.__bsp_ASSERT                           0x08001b90   Section        0  bsp.o(i.__bsp_ASSERT)
+    i.__bsp_debug                            0x08001ca8   Section        0  bsp.o(i.__bsp_debug)
+    i.__bsp_debug_dec                        0x08001ccc   Section        0  bsp.o(i.__bsp_debug_dec)
+    i.__bsp_debug_msg                        0x08001d1e   Section        0  bsp.o(i.__bsp_debug_msg)
+    i.__bsp_debug_msg_ln                     0x08001d34   Section        0  bsp.o(i.__bsp_debug_msg_ln)
+    i.__mrfi_GDO0_INIT                       0x08001d4c   Section        0  mrfi.o(i.__mrfi_GDO0_INIT)
+    i.__mrfi_SPI_IS_INITIALIZED              0x08001da8   Section        0  mrfi.o(i.__mrfi_SPI_IS_INITIALIZED)
+    i.__mrfi_SPI_READ_BYTE                   0x08001db8   Section        0  mrfi.o(i.__mrfi_SPI_READ_BYTE)
+    i.__mrfi_SPI_WAIT_DONE                   0x08001dd4   Section        0  mrfi.o(i.__mrfi_SPI_WAIT_DONE)
+    i.__mrfi_SPI_WRITE_BYTE                  0x08001de8   Section        0  mrfi.o(i.__mrfi_SPI_WRITE_BYTE)
+    i.__scatterload_copy                     0x08001e14   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08001e22   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08001e24   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.createRandomAddress                    0x08001e34   Section        0  mrfi.o(i.createRandomAddress)
+    i.dispatchFrame                          0x08001e9c   Section        0  nwk_frame.o(i.dispatchFrame)
+    dispatchFrame                            0x08001e9d   Thumb Code   144  nwk_frame.o(i.dispatchFrame)
+    i.gpioPinConfig                          0x08001f38   Section        0  bsp.o(i.gpioPinConfig)
+    i.gpioPinIn                              0x08001f62   Section        0  bsp.o(i.gpioPinIn)
+    i.gpioPinMask                            0x08001f80   Section        0  bsp.o(i.gpioPinMask)
+    i.gpioPort                               0x08001f90   Section        0  bsp.o(i.gpioPort)
+    i.handleLinkRequest                      0x08001fa4   Section        0  nwk_link.o(i.handleLinkRequest)
+    handleLinkRequest                        0x08001fa5   Thumb Code    42  nwk_link.o(i.handleLinkRequest)
+    i.handlePingRequest                      0x08001fce   Section        0  nwk_ping.o(i.handlePingRequest)
+    handlePingRequest                        0x08001fcf   Thumb Code    24  nwk_ping.o(i.handlePingRequest)
+    i.initializeConnection                   0x08001fe8   Section        0  nwk.o(i.initializeConnection)
+    initializeConnection                     0x08001fe9   Thumb Code    58  nwk.o(i.initializeConnection)
+    i.ioctlPreInitAccessIsOK                 0x08002028   Section        0  nwk_api.o(i.ioctlPreInitAccessIsOK)
+    ioctlPreInitAccessIsOK                   0x08002029   Thumb Code    26  nwk_api.o(i.ioctlPreInitAccessIsOK)
+    i.linkTo                                 0x08002044   Section        0  main_manyeds_autoack.o(i.linkTo)
+    i.main                                   0x08002180   Section        0  main_manyeds_autoack.o(i.main)
+    i.map_lid2idx                            0x080021e4   Section        0  nwk.o(i.map_lid2idx)
+    map_lid2idx                              0x080021e5   Thumb Code    44  nwk.o(i.map_lid2idx)
+    i.mrfiSpiCmdStrobe                       0x08002214   Section        0  mrfi.o(i.mrfiSpiCmdStrobe)
+    i.mrfiSpiInit                            0x080022a4   Section        0  mrfi.o(i.mrfiSpiInit)
+    i.mrfiSpiReadReg                         0x080022dc   Section        0  mrfi.o(i.mrfiSpiReadReg)
+    i.mrfiSpiReadRxFifo                      0x08002344   Section        0  mrfi.o(i.mrfiSpiReadRxFifo)
+    i.mrfiSpiWriteReg                        0x0800235c   Section        0  mrfi.o(i.mrfiSpiWriteReg)
+    i.mrfiSpiWriteTxFifo                     0x080023c4   Section        0  mrfi.o(i.mrfiSpiWriteTxFifo)
+    i.mrfi_TxCCADone                         0x080023d8   Section        0  mrfi.o(i.mrfi_TxCCADone)
+    mrfi_TxCCADone                           0x080023d9   Thumb Code    10  mrfi.o(i.mrfi_TxCCADone)
+    i.mrfi_TxImmediateDone                   0x080023e8   Section        0  mrfi.o(i.mrfi_TxImmediateDone)
+    mrfi_TxImmediateDone                     0x080023e9   Thumb Code    10  mrfi.o(i.mrfi_TxImmediateDone)
+    i.nwk_QInit                              0x080023f8   Section        0  nwk_qmgmt.o(i.nwk_QInit)
+    i.nwk_QadjustOrder                       0x08002414   Section        0  nwk_qmgmt.o(i.nwk_QadjustOrder)
+    i.nwk_QfindOldest                        0x08002464   Section        0  nwk_qmgmt.o(i.nwk_QfindOldest)
+    i.nwk_QfindSlot                          0x08002594   Section        0  nwk_qmgmt.o(i.nwk_QfindSlot)
+    i.nwk_allocateLocalRxPort                0x08002630   Section        0  nwk.o(i.nwk_allocateLocalRxPort)
+    i.nwk_buildAckReqFrame                   0x08002714   Section        0  nwk_frame.o(i.nwk_buildAckReqFrame)
+    i.nwk_buildFrame                         0x08002750   Section        0  nwk_frame.o(i.nwk_buildFrame)
+    i.nwk_checkConnInfo                      0x08002818   Section        0  nwk.o(i.nwk_checkConnInfo)
+    i.nwk_connectionControl                  0x0800283a   Section        0  nwk_ioctl.o(i.nwk_connectionControl)
+    i.nwk_deviceAddress                      0x0800286a   Section        0  nwk_ioctl.o(i.nwk_deviceAddress)
+    i.nwk_frameInit                          0x08002894   Section        0  nwk_frame.o(i.nwk_frameInit)
+    i.nwk_freeConnection                     0x080028cc   Section        0  nwk.o(i.nwk_freeConnection)
+    i.nwk_freqInit                           0x080028d2   Section        0  nwk_freq.o(i.nwk_freqInit)
+    i.nwk_getBCastAddress                    0x080028d4   Section        0  nwk_globals.o(i.nwk_getBCastAddress)
+    i.nwk_getConnInfo                        0x080028dc   Section        0  nwk.o(i.nwk_getConnInfo)
+    i.nwk_getFWVersion                       0x08002918   Section        0  nwk_globals.o(i.nwk_getFWVersion)
+    i.nwk_getMyAddress                       0x08002920   Section        0  nwk_globals.o(i.nwk_getMyAddress)
+    i.nwk_getMyRxType                        0x0800293c   Section        0  nwk_frame.o(i.nwk_getMyRxType)
+    i.nwk_getNextConnection                  0x08002948   Section        0  nwk.o(i.nwk_getNextConnection)
+    i.nwk_getNumObjectFromMsg                0x08002990   Section        0  nwk.o(i.nwk_getNumObjectFromMsg)
+    i.nwk_getProtocolVersion                 0x080029bc   Section        0  nwk_globals.o(i.nwk_getProtocolVersion)
+    i.nwk_globalsInit                        0x080029c8   Section        0  nwk_globals.o(i.nwk_globalsInit)
+    i.nwk_isConnectionValid                  0x080029f4   Section        0  nwk.o(i.nwk_isConnectionValid)
+    i.nwk_isLinkDuplicate                    0x08002a80   Section        0  nwk.o(i.nwk_isLinkDuplicate)
+    i.nwk_isValidReply                       0x08002ac0   Section        0  nwk.o(i.nwk_isValidReply)
+    i.nwk_join                               0x08002b08   Section        0  nwk_join.o(i.nwk_join)
+    i.nwk_joinInit                           0x08002be0   Section        0  nwk_join.o(i.nwk_joinInit)
+    i.nwk_link                               0x08002c10   Section        0  nwk_link.o(i.nwk_link)
+    i.nwk_linkInit                           0x08002d58   Section        0  nwk_link.o(i.nwk_linkInit)
+    i.nwk_mgmtInit                           0x08002d8c   Section        0  nwk_mgmt.o(i.nwk_mgmtInit)
+    i.nwk_nwkInit                            0x08002d9c   Section        0  nwk.o(i.nwk_nwkInit)
+    i.nwk_pingInit                           0x08002e20   Section        0  nwk_ping.o(i.nwk_pingInit)
+    i.nwk_processFreq                        0x08002e30   Section        0  nwk_freq.o(i.nwk_processFreq)
+    i.nwk_processJoin                        0x08002e38   Section        0  nwk_join.o(i.nwk_processJoin)
+    i.nwk_processLink                        0x08002e60   Section        0  nwk_link.o(i.nwk_processLink)
+    i.nwk_processMgmt                        0x08002e90   Section        0  nwk_mgmt.o(i.nwk_processMgmt)
+    i.nwk_processPing                        0x08002ed8   Section        0  nwk_ping.o(i.nwk_processPing)
+    i.nwk_processSecurity                    0x08002f08   Section        0  nwk_security.o(i.nwk_processSecurity)
+    i.nwk_putNumObjectIntoMsg                0x08002f0e   Section        0  nwk.o(i.nwk_putNumObjectIntoMsg)
+    i.nwk_radioControl                       0x08002f4e   Section        0  nwk_ioctl.o(i.nwk_radioControl)
+    i.nwk_rawReceive                         0x08002fba   Section        0  nwk_ioctl.o(i.nwk_rawReceive)
+    i.nwk_rawSend                            0x08002fde   Section        0  nwk_ioctl.o(i.nwk_rawSend)
+    i.nwk_retrieveFrame                      0x08003026   Section        0  nwk_frame.o(i.nwk_retrieveFrame)
+    i.nwk_securityInit                       0x080030c0   Section        0  nwk_security.o(i.nwk_securityInit)
+    i.nwk_sendAckReply                       0x080030c4   Section        0  nwk_frame.o(i.nwk_sendAckReply)
+    i.nwk_sendFrame                          0x080031a0   Section        0  nwk_frame.o(i.nwk_sendFrame)
+    i.nwk_setAPAddress                       0x080031d4   Section        0  nwk_globals.o(i.nwk_setAPAddress)
+    i.nwk_setLinkToken                       0x080031e0   Section        0  nwk_link.o(i.nwk_setLinkToken)
+    i.nwk_setMyAddress                       0x080031ec   Section        0  nwk_globals.o(i.nwk_setMyAddress)
+    i.sCB                                    0x08003210   Section        0  main_manyeds_autoack.o(i.sCB)
+    sCB                                      0x08003211   Thumb Code    28  main_manyeds_autoack.o(i.sCB)
+    i.smpl_send_link_reply                   0x08003234   Section        0  nwk_link.o(i.smpl_send_link_reply)
+    smpl_send_link_reply                     0x08003235   Thumb Code   336  nwk_link.o(i.smpl_send_link_reply)
+    i.smpl_send_mgmt_reply                   0x08003394   Section        0  nwk_mgmt.o(i.smpl_send_mgmt_reply)
+    smpl_send_mgmt_reply                     0x08003395   Thumb Code     2  nwk_mgmt.o(i.smpl_send_mgmt_reply)
+    i.smpl_send_ping_reply                   0x08003396   Section        0  nwk_ping.o(i.smpl_send_ping_reply)
+    smpl_send_ping_reply                     0x08003397   Thumb Code    52  nwk_ping.o(i.smpl_send_ping_reply)
+    i.spiBurstFifoAccess                     0x080033cc   Section        0  mrfi.o(i.spiBurstFifoAccess)
+    spiBurstFifoAccess                       0x080033cd   Thumb Code   158  mrfi.o(i.spiBurstFifoAccess)
+    i.spiRegAccess                           0x080034ac   Section        0  mrfi.o(i.spiRegAccess)
+    spiRegAccess                             0x080034ad   Thumb Code    70  mrfi.o(i.spiRegAccess)
+    i.toggleLED                              0x08003534   Section        0  main_manyeds_autoack.o(i.toggleLED)
+    .constdata                               0x08003564   Section       21  bsp.o(.constdata)
+    __func__                                 0x08003564   Data           9  bsp.o(.constdata)
+    __func__                                 0x0800356d   Data          12  bsp.o(.constdata)
+    .constdata                               0x08003579   Section      288  mrfi.o(.constdata)
+    mrfiRadioCfg                             0x0800357d   Data          62  mrfi.o(.constdata)
+    mrfiLogicalChanTable                     0x080035bb   Data           4  mrfi.o(.constdata)
+    mrfiRFPowerTable                         0x080035bf   Data           3  mrfi.o(.constdata)
+    __func__                                 0x080035c2   Data          10  mrfi.o(.constdata)
+    __func__                                 0x080035cc   Data          14  mrfi.o(.constdata)
+    __func__                                 0x080035da   Data          18  mrfi.o(.constdata)
+    __func__                                 0x080035ec   Data          10  mrfi.o(.constdata)
+    __func__                                 0x080035f6   Data          12  mrfi.o(.constdata)
+    __func__                                 0x08003602   Data          10  mrfi.o(.constdata)
+    __func__                                 0x0800360c   Data          17  mrfi.o(.constdata)
+    __func__                                 0x0800361d   Data          15  mrfi.o(.constdata)
+    __func__                                 0x0800362c   Data          16  mrfi.o(.constdata)
+    __func__                                 0x0800363c   Data          13  mrfi.o(.constdata)
+    __func__                                 0x08003649   Data          19  mrfi.o(.constdata)
+    __func__                                 0x0800365c   Data          23  mrfi.o(.constdata)
+    __func__                                 0x08003673   Data          14  mrfi.o(.constdata)
+    __func__                                 0x08003681   Data          24  mrfi.o(.constdata)
+    .constdata                               0x0800369c   Section       24  nwk_frame.o(.constdata)
+    func                                     0x0800369c   Data          24  nwk_frame.o(.constdata)
+    .constdata                               0x080036b4   Section        9  nwk_globals.o(.constdata)
+    sMyROMAddress                            0x080036b4   Data           4  nwk_globals.o(.constdata)
+    sVersionInfo                             0x080036b8   Data           5  nwk_globals.o(.constdata)
+    .constdata                               0x080036bd   Section       16  stm32f10x_rcc.o(.constdata)
+    .data                                    0x20000000   Section        6  main_manyeds_autoack.o(.data)
+    sTid                                     0x20000000   Data           1  main_manyeds_autoack.o(.data)
+    sLinkID1                                 0x20000001   Data           1  main_manyeds_autoack.o(.data)
+    sPeerFrameSem                            0x20000002   Data           1  main_manyeds_autoack.o(.data)
+    ticks                                    0x20000004   Data           2  main_manyeds_autoack.o(.data)
+    .data                                    0x20000006   Section        4  delay.o(.data)
+    fac_us                                   0x20000006   Data           1  delay.o(.data)
+    fac_ms                                   0x20000008   Data           2  delay.o(.data)
+    .data                                    0x2000000a   Section       15  mrfi.o(.data)
+    mrfiRadioState                           0x2000000a   Data           1  mrfi.o(.data)
+    mrfiRndSeed                              0x2000000b   Data           1  mrfi.o(.data)
+    sKillSem                                 0x2000000c   Data           1  mrfi.o(.data)
+    sReplyDelayContext                       0x2000000d   Data           1  mrfi.o(.data)
+    sReplyDelayScalar                        0x2000000e   Data           2  mrfi.o(.data)
+    sBackoffHelper                           0x20000010   Data           2  mrfi.o(.data)
+    rx_isr_context                           0x20000012   Data           1  mrfi.o(.data)
+    mrfiRxFilterEnabled                      0x20000013   Data           1  mrfi.o(.data)
+    mrfiRxFilterAddr                         0x20000014   Data           4  mrfi.o(.data)
+    .data                                    0x20000019   Section       41  nwk.o(.data)
+    sPersistInfo                             0x20000019   Data          41  nwk.o(.data)
+    .data                                    0x20000042   Section        1  nwk_api.o(.data)
+    sInit_done                               0x20000042   Data           1  nwk_api.o(.data)
+    .data                                    0x20000044   Section       16  nwk_frame.o(.data)
+    sTRACTID                                 0x20000044   Data           1  nwk_frame.o(.data)
+    sMyAddr                                  0x20000048   Data           4  nwk_frame.o(.data)
+    sMyRxType                                0x2000004c   Data           1  nwk_frame.o(.data)
+    sMyTxType                                0x2000004d   Data           1  nwk_frame.o(.data)
+    spCallback                               0x20000050   Data           4  nwk_frame.o(.data)
+    .data                                    0x20000054   Section        9  nwk_globals.o(.data)
+    sAPAddress                               0x20000054   Data           4  nwk_globals.o(.data)
+    sMyRAMAddress                            0x20000058   Data           4  nwk_globals.o(.data)
+    sRAMAddressIsSet                         0x2000005c   Data           1  nwk_globals.o(.data)
+    .data                                    0x20000060   Section        9  nwk_join.o(.data)
+    sJoinToken                               0x20000060   Data           4  nwk_join.o(.data)
+    spCallback                               0x20000064   Data           4  nwk_join.o(.data)
+    sTid                                     0x20000068   Data           1  nwk_join.o(.data)
+    .data                                    0x2000006c   Section        9  nwk_link.o(.data)
+    sLinkToken                               0x2000006c   Data           4  nwk_link.o(.data)
+    sListenActive                            0x20000070   Data           1  nwk_link.o(.data)
+    sServiceLinkID                           0x20000071   Data           2  nwk_link.o(.data)
+    sNumLinkers                              0x20000073   Data           1  nwk_link.o(.data)
+    sTid                                     0x20000074   Data           1  nwk_link.o(.data)
+    .data                                    0x20000078   Section        5  nwk_mgmt.o(.data)
+    sAPAddr                                  0x20000078   Data           4  nwk_mgmt.o(.data)
+    sTid                                     0x2000007c   Data           1  nwk_mgmt.o(.data)
+    .data                                    0x2000007d   Section        1  nwk_ping.o(.data)
+    sTid                                     0x2000007d   Data           1  nwk_ping.o(.data)
+    .data                                    0x20000080   Section        4  system_stm32f10x.o(.data)
+    .data                                    0x20000084   Section        4  stm32f10x_rcc.o(.data)
+    ADCPrescTable                            0x20000084   Data           4  stm32f10x_rcc.o(.data)
+    .bss                                     0x20000088   Section       48  mrfi.o(.bss)
+    mrfiIncomingPacket                       0x20000088   Data          48  mrfi.o(.bss)
+    .bss                                     0x200000b8   Section      200  nwk_qmgmt.o(.bss)
+    sInFrameQ                                0x200000b8   Data         100  nwk_qmgmt.o(.bss)
+    sOutFrameQ                               0x2000011c   Data         100  nwk_qmgmt.o(.bss)
+    STACK                                    0x20000180   Section     1024  startup_stm32f10x_md_vl.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main_manyeds_autoack.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_Size                           0x00000120   Number         0  startup_stm32f10x_md_vl.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32f10x_md_vl.o(RESET)
+    __Vectors_End                            0x08000120   Data           0  startup_stm32f10x_md_vl.o(RESET)
+    __main                                   0x08000121   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x08000121   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x08000125   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x08000129   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x08000129   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x08000129   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x08000129   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x08000131   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x08000131   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x08000135   Thumb Code     8  startup_stm32f10x_md_vl.o(.text)
+    NMI_Handler                              0x0800013d   Thumb Code     2  startup_stm32f10x_md_vl.o(.text)
+    HardFault_Handler                        0x0800013f   Thumb Code     2  startup_stm32f10x_md_vl.o(.text)
+    MemManage_Handler                        0x08000141   Thumb Code     2  startup_stm32f10x_md_vl.o(.text)
+    BusFault_Handler                         0x08000143   Thumb Code     2  startup_stm32f10x_md_vl.o(.text)
+    UsageFault_Handler                       0x08000145   Thumb Code     2  startup_stm32f10x_md_vl.o(.text)
+    SVC_Handler                              0x08000147   Thumb Code     2  startup_stm32f10x_md_vl.o(.text)
+    DebugMon_Handler                         0x08000149   Thumb Code     2  startup_stm32f10x_md_vl.o(.text)
+    PendSV_Handler                           0x0800014b   Thumb Code     2  startup_stm32f10x_md_vl.o(.text)
+    SysTick_Handler                          0x0800014d   Thumb Code     2  startup_stm32f10x_md_vl.o(.text)
+    ADC1_IRQHandler                          0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    CEC_IRQHandler                           0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    DMA1_Channel1_IRQHandler                 0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    DMA1_Channel2_IRQHandler                 0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    DMA1_Channel3_IRQHandler                 0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    DMA1_Channel4_IRQHandler                 0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    DMA1_Channel5_IRQHandler                 0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    DMA1_Channel6_IRQHandler                 0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    DMA1_Channel7_IRQHandler                 0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    EXTI0_IRQHandler                         0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    EXTI15_10_IRQHandler                     0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    EXTI2_IRQHandler                         0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    EXTI3_IRQHandler                         0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    EXTI4_IRQHandler                         0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    EXTI9_5_IRQHandler                       0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    FLASH_IRQHandler                         0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    I2C1_ER_IRQHandler                       0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    I2C1_EV_IRQHandler                       0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    I2C2_ER_IRQHandler                       0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    I2C2_EV_IRQHandler                       0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    PVD_IRQHandler                           0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    RCC_IRQHandler                           0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    RTCAlarm_IRQHandler                      0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    RTC_IRQHandler                           0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    SPI1_IRQHandler                          0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    SPI2_IRQHandler                          0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    TAMPER_IRQHandler                        0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    TIM1_BRK_TIM15_IRQHandler                0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    TIM1_CC_IRQHandler                       0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    TIM1_TRG_COM_TIM17_IRQHandler            0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    TIM1_UP_TIM16_IRQHandler                 0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    TIM2_IRQHandler                          0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    TIM3_IRQHandler                          0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    TIM4_IRQHandler                          0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    TIM6_DAC_IRQHandler                      0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    TIM7_IRQHandler                          0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    USART1_IRQHandler                        0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    USART2_IRQHandler                        0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    USART3_IRQHandler                        0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    WWDG_IRQHandler                          0x0800014f   Thumb Code     0  startup_stm32f10x_md_vl.o(.text)
+    ___aeabi_memcpy4$move                    0x08000159   Thumb Code     0  memmovea.o(.text)
+    ___aeabi_memcpy8$move                    0x08000159   Thumb Code     0  memmovea.o(.text)
+    __aeabi_memcpy                           0x08000159   Thumb Code    64  memmovea.o(.text)
+    __aeabi_memmove                          0x08000159   Thumb Code     0  memmovea.o(.text)
+    __aeabi_memmove4                         0x08000159   Thumb Code     0  memmovea.o(.text)
+    __aeabi_memmove8                         0x08000159   Thumb Code     0  memmovea.o(.text)
+    __aeabi_memset                           0x08000199   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x08000199   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x08000199   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x080001a7   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x080001a7   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x080001a7   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x080001ab   Thumb Code    18  memseta.o(.text)
+    memcmp                                   0x080001bd   Thumb Code    26  memcmp.o(.text)
+    __scatterload                            0x080001d9   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x080001d9   Thumb Code     0  init.o(.text)
+    BSP_Delay                                0x080001fd   Thumb Code     2  bsp.o(i.BSP_Delay)
+    BSP_Init                                 0x08000201   Thumb Code    52  bsp.o(i.BSP_Init)
+    BSP_InitBoard                            0x0800025d   Thumb Code    32  bsp.o(i.BSP_InitBoard)
+    BSP_InitButtons                          0x08000281   Thumb Code    12  bsp.o(i.BSP_InitButtons)
+    BSP_InitDrivers                          0x0800028d   Thumb Code    12  bsp.o(i.BSP_InitDrivers)
+    BSP_InitLeds                             0x08000299   Thumb Code    50  bsp.o(i.BSP_InitLeds)
+    BSP_InitSPI                              0x080002d1   Thumb Code   124  bsp.o(i.BSP_InitSPI)
+    BSP_InitUSART                            0x08000391   Thumb Code   112  bsp.o(i.BSP_InitUSART)
+    CRC_CalcCRC                              0x0800040d   Thumb Code    10  stm32f10x_crc.o(i.CRC_CalcCRC)
+    CRC_GetCRC                               0x0800041d   Thumb Code     6  stm32f10x_crc.o(i.CRC_GetCRC)
+    CRC_ResetDR                              0x08000429   Thumb Code     8  stm32f10x_crc.o(i.CRC_ResetDR)
+    DBGMCU_Config                            0x08000435   Thumb Code    26  stm32f10x_dbgmcu.o(i.DBGMCU_Config)
+    EXTI1_IRQHandler                         0x08000455   Thumb Code    70  mrfi.o(i.EXTI1_IRQHandler)
+    EXTI_Init                                0x080004b1   Thumb Code   142  stm32f10x_exti.o(i.EXTI_Init)
+    GPIO_EXTILineConfig                      0x08000545   Thumb Code    60  stm32f10x_gpio.o(i.GPIO_EXTILineConfig)
+    MRFI_DelayMs                             0x08000585   Thumb Code    24  mrfi.o(i.MRFI_DelayMs)
+    MRFI_EnableRxAddrFilter                  0x0800059d   Thumb Code    46  mrfi.o(i.MRFI_EnableRxAddrFilter)
+    MRFI_GetRadioState                       0x08000619   Thumb Code     6  mrfi.o(i.MRFI_GetRadioState)
+    MRFI_GpioIsr                             0x08000625   Thumb Code    38  mrfi.o(i.MRFI_GpioIsr)
+    MRFI_Init                                0x08000651   Thumb Code   494  mrfi.o(i.MRFI_Init)
+    MRFI_PostKillSem                         0x080008a9   Thumb Code    14  mrfi.o(i.MRFI_PostKillSem)
+    MRFI_RandomByte                          0x080008dd   Thumb Code    20  mrfi.o(i.MRFI_RandomByte)
+    MRFI_Receive                             0x080008f5   Thumb Code    16  mrfi.o(i.MRFI_Receive)
+    MRFI_ReplyDelay                          0x08000909   Thumb Code   106  mrfi.o(i.MRFI_ReplyDelay)
+    MRFI_Rssi                                0x08000981   Thumb Code    80  mrfi.o(i.MRFI_Rssi)
+    MRFI_RxAddrIsFiltered                    0x08000a15   Thumb Code    72  mrfi.o(i.MRFI_RxAddrIsFiltered)
+    MRFI_RxCompleteISR                       0x08000a69   Thumb Code    26  nwk_frame.o(i.MRFI_RxCompleteISR)
+    MRFI_RxIdle                              0x08000a85   Thumb Code    46  mrfi.o(i.MRFI_RxIdle)
+    MRFI_RxOn                                0x08000af9   Thumb Code    46  mrfi.o(i.MRFI_RxOn)
+    MRFI_SPI_CSN_IS_HIGH                     0x08000b6d   Thumb Code    10  mrfi.o(i.MRFI_SPI_CSN_IS_HIGH)
+    MRFI_SPI_DRIVE_CSN_HIGH                  0x08000b7d   Thumb Code     8  mrfi.o(i.MRFI_SPI_DRIVE_CSN_HIGH)
+    MRFI_SPI_DRIVE_CSN_LOW                   0x08000b89   Thumb Code     8  mrfi.o(i.MRFI_SPI_DRIVE_CSN_LOW)
+    MRFI_SetLogicalChannel                   0x08000b95   Thumb Code    52  mrfi.o(i.MRFI_SetLogicalChannel)
+    MRFI_SetRFPwr                            0x08000c11   Thumb Code    52  mrfi.o(i.MRFI_SetRFPwr)
+    MRFI_SetRxAddrFilter                     0x08000c8d   Thumb Code    48  mrfi.o(i.MRFI_SetRxAddrFilter)
+    MRFI_Sleep                               0x08000cc5   Thumb Code    52  mrfi.o(i.MRFI_Sleep)
+    MRFI_Transmit                            0x08000cfd   Thumb Code   360  mrfi.o(i.MRFI_Transmit)
+    MRFI_WakeUp                              0x08000eb9   Thumb Code    64  mrfi.o(i.MRFI_WakeUp)
+    Mrfi_DelayUsecLong                       0x08000f53   Thumb Code   164  mrfi.o(i.Mrfi_DelayUsecLong)
+    NVIC_Init                                0x08001261   Thumb Code   100  misc.o(i.NVIC_Init)
+    RCC_AHBPeriphClockCmd                    0x080012d1   Thumb Code    26  stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd)
+    RCC_APB1PeriphClockCmd                   0x080012f1   Thumb Code    26  stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd)
+    RCC_APB2PeriphClockCmd                   0x08001311   Thumb Code    26  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
+    RCC_Configuration                        0x08001331   Thumb Code   112  bsp.o(i.RCC_Configuration)
+    RCC_DeInit                               0x080013a1   Thumb Code    64  stm32f10x_rcc.o(i.RCC_DeInit)
+    RCC_GetClocksFreq                        0x080013ed   Thumb Code   192  stm32f10x_rcc.o(i.RCC_GetClocksFreq)
+    RCC_GetFlagStatus                        0x080014c1   Thumb Code    56  stm32f10x_rcc.o(i.RCC_GetFlagStatus)
+    RCC_GetSYSCLKSource                      0x080014fd   Thumb Code    10  stm32f10x_rcc.o(i.RCC_GetSYSCLKSource)
+    RCC_HCLKConfig                           0x0800150d   Thumb Code    18  stm32f10x_rcc.o(i.RCC_HCLKConfig)
+    RCC_HSEConfig                            0x08001525   Thumb Code    70  stm32f10x_rcc.o(i.RCC_HSEConfig)
+    RCC_LSICmd                               0x08001571   Thumb Code     6  stm32f10x_rcc.o(i.RCC_LSICmd)
+    RCC_PCLK1Config                          0x0800157d   Thumb Code    18  stm32f10x_rcc.o(i.RCC_PCLK1Config)
+    RCC_PCLK2Config                          0x08001595   Thumb Code    20  stm32f10x_rcc.o(i.RCC_PCLK2Config)
+    RCC_PLLCmd                               0x080015ad   Thumb Code     6  stm32f10x_rcc.o(i.RCC_PLLCmd)
+    RCC_PLLConfig                            0x080015b9   Thumb Code    24  stm32f10x_rcc.o(i.RCC_PLLConfig)
+    RCC_SYSCLKConfig                         0x080015d5   Thumb Code    18  stm32f10x_rcc.o(i.RCC_SYSCLKConfig)
+    RCC_WaitForHSEStartUp                    0x080015ed   Thumb Code    56  stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp)
+    SMPL_Init                                0x08001625   Thumb Code    62  nwk_api.o(i.SMPL_Init)
+    SMPL_Ioctl                               0x08001669   Thumb Code   174  nwk_api.o(i.SMPL_Ioctl)
+    SMPL_Link                                0x0800171d   Thumb Code    12  nwk_api.o(i.SMPL_Link)
+    SMPL_SendOpt                             0x08001729   Thumb Code   256  nwk_api.o(i.SMPL_SendOpt)
+    SPI_Cmd                                  0x08001829   Thumb Code    24  stm32f10x_spi.o(i.SPI_Cmd)
+    SPI_Init                                 0x08001841   Thumb Code    60  stm32f10x_spi.o(i.SPI_Init)
+    SysTick_CLKSourceConfig                  0x08001965   Thumb Code    40  misc.o(i.SysTick_CLKSourceConfig)
+    Sys_delay_init                           0x0800198d   Thumb Code    50  delay.o(i.Sys_delay_init)
+    Sys_delay_ms                             0x080019d1   Thumb Code    72  delay.o(i.Sys_delay_ms)
+    SystemInit                               0x08001a1d   Thumb Code    78  system_stm32f10x.o(i.SystemInit)
+    USART_Cmd                                0x08001a7d   Thumb Code    24  stm32f10x_usart.o(i.USART_Cmd)
+    USART_GetFlagStatus                      0x08001a95   Thumb Code    26  stm32f10x_usart.o(i.USART_GetFlagStatus)
+    USART_Init                               0x08001ab1   Thumb Code   210  stm32f10x_usart.o(i.USART_Init)
+    USART_SendData                           0x08001b89   Thumb Code     8  stm32f10x_usart.o(i.USART_SendData)
+    __bsp_ASSERT                             0x08001b91   Thumb Code   234  bsp.o(i.__bsp_ASSERT)
+    __bsp_debug                              0x08001ca9   Thumb Code    30  bsp.o(i.__bsp_debug)
+    __bsp_debug_dec                          0x08001ccd   Thumb Code    82  bsp.o(i.__bsp_debug_dec)
+    __bsp_debug_msg                          0x08001d1f   Thumb Code    22  bsp.o(i.__bsp_debug_msg)
+    __bsp_debug_msg_ln                       0x08001d35   Thumb Code    18  bsp.o(i.__bsp_debug_msg_ln)
+    __mrfi_GDO0_INIT                         0x08001d4d   Thumb Code    88  mrfi.o(i.__mrfi_GDO0_INIT)
+    __mrfi_SPI_IS_INITIALIZED                0x08001da9   Thumb Code    10  mrfi.o(i.__mrfi_SPI_IS_INITIALIZED)
+    __mrfi_SPI_READ_BYTE                     0x08001db9   Thumb Code    22  mrfi.o(i.__mrfi_SPI_READ_BYTE)
+    __mrfi_SPI_WAIT_DONE                     0x08001dd5   Thumb Code    16  mrfi.o(i.__mrfi_SPI_WAIT_DONE)
+    __mrfi_SPI_WRITE_BYTE                    0x08001de9   Thumb Code    38  mrfi.o(i.__mrfi_SPI_WRITE_BYTE)
+    __scatterload_copy                       0x08001e15   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08001e23   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08001e25   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    createRandomAddress                      0x08001e35   Thumb Code    98  mrfi.o(i.createRandomAddress)
+    gpioPinConfig                            0x08001f39   Thumb Code    42  bsp.o(i.gpioPinConfig)
+    gpioPinIn                                0x08001f63   Thumb Code    30  bsp.o(i.gpioPinIn)
+    gpioPinMask                              0x08001f81   Thumb Code    14  bsp.o(i.gpioPinMask)
+    gpioPort                                 0x08001f91   Thumb Code    14  bsp.o(i.gpioPort)
+    linkTo                                   0x08002045   Thumb Code   294  main_manyeds_autoack.o(i.linkTo)
+    main                                     0x08002181   Thumb Code    90  main_manyeds_autoack.o(i.main)
+    mrfiSpiCmdStrobe                         0x08002215   Thumb Code    78  mrfi.o(i.mrfiSpiCmdStrobe)
+    mrfiSpiInit                              0x080022a5   Thumb Code    50  mrfi.o(i.mrfiSpiInit)
+    mrfiSpiReadReg                           0x080022dd   Thumb Code    40  mrfi.o(i.mrfiSpiReadReg)
+    mrfiSpiReadRxFifo                        0x08002345   Thumb Code    22  mrfi.o(i.mrfiSpiReadRxFifo)
+    mrfiSpiWriteReg                          0x0800235d   Thumb Code    40  mrfi.o(i.mrfiSpiWriteReg)
+    mrfiSpiWriteTxFifo                       0x080023c5   Thumb Code    18  mrfi.o(i.mrfiSpiWriteTxFifo)
+    nwk_QInit                                0x080023f9   Thumb Code    20  nwk_qmgmt.o(i.nwk_QInit)
+    nwk_QadjustOrder                         0x08002415   Thumb Code    76  nwk_qmgmt.o(i.nwk_QadjustOrder)
+    nwk_QfindOldest                          0x08002465   Thumb Code   298  nwk_qmgmt.o(i.nwk_QfindOldest)
+    nwk_QfindSlot                            0x08002595   Thumb Code   148  nwk_qmgmt.o(i.nwk_QfindSlot)
+    nwk_allocateLocalRxPort                  0x08002631   Thumb Code   224  nwk.o(i.nwk_allocateLocalRxPort)
+    nwk_buildAckReqFrame                     0x08002715   Thumb Code    58  nwk_frame.o(i.nwk_buildAckReqFrame)
+    nwk_buildFrame                           0x08002751   Thumb Code   186  nwk_frame.o(i.nwk_buildFrame)
+    nwk_checkConnInfo                        0x08002819   Thumb Code    34  nwk.o(i.nwk_checkConnInfo)
+    nwk_connectionControl                    0x0800283b   Thumb Code    48  nwk_ioctl.o(i.nwk_connectionControl)
+    nwk_deviceAddress                        0x0800286b   Thumb Code    40  nwk_ioctl.o(i.nwk_deviceAddress)
+    nwk_frameInit                            0x08002895   Thumb Code    38  nwk_frame.o(i.nwk_frameInit)
+    nwk_freeConnection                       0x080028cd   Thumb Code     6  nwk.o(i.nwk_freeConnection)
+    nwk_freqInit                             0x080028d3   Thumb Code     2  nwk_freq.o(i.nwk_freqInit)
+    nwk_getBCastAddress                      0x080028d5   Thumb Code     4  nwk_globals.o(i.nwk_getBCastAddress)
+    nwk_getConnInfo                          0x080028dd   Thumb Code    54  nwk.o(i.nwk_getConnInfo)
+    nwk_getFWVersion                         0x08002919   Thumb Code     4  nwk_globals.o(i.nwk_getFWVersion)
+    nwk_getMyAddress                         0x08002921   Thumb Code    14  nwk_globals.o(i.nwk_getMyAddress)
+    nwk_getMyRxType                          0x0800293d   Thumb Code     6  nwk_frame.o(i.nwk_getMyRxType)
+    nwk_getNextConnection                    0x08002949   Thumb Code    68  nwk.o(i.nwk_getNextConnection)
+    nwk_getNumObjectFromMsg                  0x08002991   Thumb Code    44  nwk.o(i.nwk_getNumObjectFromMsg)
+    nwk_getProtocolVersion                   0x080029bd   Thumb Code     6  nwk_globals.o(i.nwk_getProtocolVersion)
+    nwk_globalsInit                          0x080029c9   Thumb Code    28  nwk_globals.o(i.nwk_globalsInit)
+    nwk_isConnectionValid                    0x080029f5   Thumb Code   136  nwk.o(i.nwk_isConnectionValid)
+    nwk_isLinkDuplicate                      0x08002a81   Thumb Code    58  nwk.o(i.nwk_isLinkDuplicate)
+    nwk_isValidReply                         0x08002ac1   Thumb Code    72  nwk.o(i.nwk_isValidReply)
+    nwk_join                                 0x08002b09   Thumb Code   206  nwk_join.o(i.nwk_join)
+    nwk_joinInit                             0x08002be1   Thumb Code    30  nwk_join.o(i.nwk_joinInit)
+    nwk_link                                 0x08002c11   Thumb Code   320  nwk_link.o(i.nwk_link)
+    nwk_linkInit                             0x08002d59   Thumb Code    36  nwk_link.o(i.nwk_linkInit)
+    nwk_mgmtInit                             0x08002d8d   Thumb Code    12  nwk_mgmt.o(i.nwk_mgmtInit)
+    nwk_nwkInit                              0x08002d9d   Thumb Code   126  nwk.o(i.nwk_nwkInit)
+    nwk_pingInit                             0x08002e21   Thumb Code    12  nwk_ping.o(i.nwk_pingInit)
+    nwk_processFreq                          0x08002e31   Thumb Code     6  nwk_freq.o(i.nwk_processFreq)
+    nwk_processJoin                          0x08002e39   Thumb Code    34  nwk_join.o(i.nwk_processJoin)
+    nwk_processLink                          0x08002e61   Thumb Code    42  nwk_link.o(i.nwk_processLink)
+    nwk_processMgmt                          0x08002e91   Thumb Code    68  nwk_mgmt.o(i.nwk_processMgmt)
+    nwk_processPing                          0x08002ed9   Thumb Code    42  nwk_ping.o(i.nwk_processPing)
+    nwk_processSecurity                      0x08002f09   Thumb Code     6  nwk_security.o(i.nwk_processSecurity)
+    nwk_putNumObjectIntoMsg                  0x08002f0f   Thumb Code    64  nwk.o(i.nwk_putNumObjectIntoMsg)
+    nwk_radioControl                         0x08002f4f   Thumb Code   108  nwk_ioctl.o(i.nwk_radioControl)
+    nwk_rawReceive                           0x08002fbb   Thumb Code    36  nwk_ioctl.o(i.nwk_rawReceive)
+    nwk_rawSend                              0x08002fdf   Thumb Code    72  nwk_ioctl.o(i.nwk_rawSend)
+    nwk_retrieveFrame                        0x08003027   Thumb Code   154  nwk_frame.o(i.nwk_retrieveFrame)
+    nwk_securityInit                         0x080030c1   Thumb Code     2  nwk_security.o(i.nwk_securityInit)
+    nwk_sendAckReply                         0x080030c5   Thumb Code   206  nwk_frame.o(i.nwk_sendAckReply)
+    nwk_sendFrame                            0x080031a1   Thumb Code    48  nwk_frame.o(i.nwk_sendFrame)
+    nwk_setAPAddress                         0x080031d5   Thumb Code     8  nwk_globals.o(i.nwk_setAPAddress)
+    nwk_setLinkToken                         0x080031e1   Thumb Code     8  nwk_link.o(i.nwk_setLinkToken)
+    nwk_setMyAddress                         0x080031ed   Thumb Code    26  nwk_globals.o(i.nwk_setMyAddress)
+    toggleLED                                0x08003535   Thumb Code    42  main_manyeds_autoack.o(i.toggleLED)
+    mrfiBroadcastAddr                        0x08003579   Data           4  mrfi.o(.constdata)
+    APBAHBPrescTable                         0x080036bd   Data          16  stm32f10x_rcc.o(.constdata)
+    Region$$Table$$Base                      0x080036d0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080036f0   Number         0  anon$$obj.o(Region$$Table)
+    mrfi_ignore_interrupt                    0x20000018   Data           1  mrfi.o(.data)
+    SystemCoreClock                          0x20000080   Data           4  system_stm32f10x.o(.data)
+    __initial_sp                             0x20000580   Data           0  startup_stm32f10x_md_vl.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x08000121
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00003778, Max: 0x00020000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x000036f0, Max: 0x00020000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x00000120   Data   RO         1327    RESET               startup_stm32f10x_md_vl.o
+    0x08000120   0x00000000   Code   RO         2164  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000120   0x00000004   Code   RO         2179    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08000124   0x00000004   Code   RO         2182    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000128   0x00000000   Code   RO         2184    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000128   0x00000000   Code   RO         2186    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000128   0x00000008   Code   RO         2187    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000130   0x00000000   Code   RO         2189    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000130   0x00000000   Code   RO         2191    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000130   0x00000004   Code   RO         2180    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000134   0x00000024   Code   RO         1328    .text               startup_stm32f10x_md_vl.o
+    0x08000158   0x00000040   Code   RO         2169    .text               mc_w.l(memmovea.o)
+    0x08000198   0x00000024   Code   RO         2171    .text               mc_w.l(memseta.o)
+    0x080001bc   0x0000001a   Code   RO         2173    .text               mc_w.l(memcmp.o)
+    0x080001d6   0x00000002   PAD
+    0x080001d8   0x00000024   Code   RO         2193    .text               mc_w.l(init.o)
+    0x080001fc   0x00000002   Code   RO          146    i.BSP_Delay         bsp.o
+    0x080001fe   0x00000002   PAD
+    0x08000200   0x0000005c   Code   RO          147    i.BSP_Init          bsp.o
+    0x0800025c   0x00000024   Code   RO          148    i.BSP_InitBoard     bsp.o
+    0x08000280   0x0000000c   Code   RO          149    i.BSP_InitButtons   bsp.o
+    0x0800028c   0x0000000c   Code   RO          150    i.BSP_InitDrivers   bsp.o
+    0x08000298   0x00000038   Code   RO          151    i.BSP_InitLeds      bsp.o
+    0x080002d0   0x000000c0   Code   RO          152    i.BSP_InitSPI       bsp.o
+    0x08000390   0x0000007c   Code   RO          153    i.BSP_InitUSART     bsp.o
+    0x0800040c   0x00000010   Code   RO         2123    i.CRC_CalcCRC       stm32f10x_crc.o
+    0x0800041c   0x0000000c   Code   RO         2124    i.CRC_GetCRC        stm32f10x_crc.o
+    0x08000428   0x0000000c   Code   RO         2126    i.CRC_ResetDR       stm32f10x_crc.o
+    0x08000434   0x00000020   Code   RO         1404    i.DBGMCU_Config     stm32f10x_dbgmcu.o
+    0x08000454   0x0000005c   Code   RO          366    i.EXTI1_IRQHandler  mrfi.o
+    0x080004b0   0x00000094   Code   RO         1434    i.EXTI_Init         stm32f10x_exti.o
+    0x08000544   0x00000040   Code   RO         1485    i.GPIO_EXTILineConfig  stm32f10x_gpio.o
+    0x08000584   0x00000018   Code   RO          368    i.MRFI_DelayMs      mrfi.o
+    0x0800059c   0x0000007c   Code   RO          370    i.MRFI_EnableRxAddrFilter  mrfi.o
+    0x08000618   0x0000000c   Code   RO          371    i.MRFI_GetRadioState  mrfi.o
+    0x08000624   0x0000002c   Code   RO          372    i.MRFI_GpioIsr      mrfi.o
+    0x08000650   0x00000258   Code   RO          373    i.MRFI_Init         mrfi.o
+    0x080008a8   0x00000018   Code   RO          374    i.MRFI_PostKillSem  mrfi.o
+    0x080008c0   0x0000001a   Code   RO          375    i.MRFI_PrepareToTx  mrfi.o
+    0x080008da   0x00000002   PAD
+    0x080008dc   0x00000018   Code   RO          376    i.MRFI_RandomByte   mrfi.o
+    0x080008f4   0x00000014   Code   RO          377    i.MRFI_Receive      mrfi.o
+    0x08000908   0x00000078   Code   RO          378    i.MRFI_ReplyDelay   mrfi.o
+    0x08000980   0x00000094   Code   RO          379    i.MRFI_Rssi         mrfi.o
+    0x08000a14   0x00000054   Code   RO          380    i.MRFI_RxAddrIsFiltered  mrfi.o
+    0x08000a68   0x0000001a   Code   RO          919    i.MRFI_RxCompleteISR  nwk_frame.o
+    0x08000a82   0x00000002   PAD
+    0x08000a84   0x00000074   Code   RO          381    i.MRFI_RxIdle       mrfi.o
+    0x08000af8   0x00000074   Code   RO          382    i.MRFI_RxOn         mrfi.o
+    0x08000b6c   0x00000010   Code   RO          383    i.MRFI_SPI_CSN_IS_HIGH  mrfi.o
+    0x08000b7c   0x0000000c   Code   RO          384    i.MRFI_SPI_DRIVE_CSN_HIGH  mrfi.o
+    0x08000b88   0x0000000c   Code   RO          385    i.MRFI_SPI_DRIVE_CSN_LOW  mrfi.o
+    0x08000b94   0x0000007c   Code   RO          386    i.MRFI_SetLogicalChannel  mrfi.o
+    0x08000c10   0x0000007c   Code   RO          387    i.MRFI_SetRFPwr     mrfi.o
+    0x08000c8c   0x00000038   Code   RO          388    i.MRFI_SetRxAddrFilter  mrfi.o
+    0x08000cc4   0x00000038   Code   RO          389    i.MRFI_Sleep        mrfi.o
+    0x08000cfc   0x000001bc   Code   RO          390    i.MRFI_Transmit     mrfi.o
+    0x08000eb8   0x00000044   Code   RO          391    i.MRFI_WakeUp       mrfi.o
+    0x08000efc   0x00000030   Code   RO          392    i.Mrfi_CalculateRssi  mrfi.o
+    0x08000f2c   0x00000026   Code   RO          393    i.Mrfi_DelayUsec    mrfi.o
+    0x08000f52   0x000000a4   Code   RO          394    i.Mrfi_DelayUsecLong  mrfi.o
+    0x08000ff6   0x00000002   PAD
+    0x08000ff8   0x0000004c   Code   RO          395    i.Mrfi_DelayUsecSem  mrfi.o
+    0x08001044   0x00000028   Code   RO          396    i.Mrfi_RandomBackoffDelay  mrfi.o
+    0x0800106c   0x00000044   Code   RO          397    i.Mrfi_RxModeOff    mrfi.o
+    0x080010b0   0x00000030   Code   RO          398    i.Mrfi_RxModeOn     mrfi.o
+    0x080010e0   0x00000180   Code   RO          399    i.Mrfi_SyncPinRxIsr  mrfi.o
+    0x08001260   0x00000070   Code   RO         1368    i.NVIC_Init         misc.o
+    0x080012d0   0x00000020   Code   RO         1597    i.RCC_AHBPeriphClockCmd  stm32f10x_rcc.o
+    0x080012f0   0x00000020   Code   RO         1598    i.RCC_APB1PeriphClockCmd  stm32f10x_rcc.o
+    0x08001310   0x00000020   Code   RO         1600    i.RCC_APB2PeriphClockCmd  stm32f10x_rcc.o
+    0x08001330   0x00000070   Code   RO          156    i.RCC_Configuration  bsp.o
+    0x080013a0   0x0000004c   Code   RO         1607    i.RCC_DeInit        stm32f10x_rcc.o
+    0x080013ec   0x000000d4   Code   RO         1608    i.RCC_GetClocksFreq  stm32f10x_rcc.o
+    0x080014c0   0x0000003c   Code   RO         1609    i.RCC_GetFlagStatus  stm32f10x_rcc.o
+    0x080014fc   0x00000010   Code   RO         1611    i.RCC_GetSYSCLKSource  stm32f10x_rcc.o
+    0x0800150c   0x00000018   Code   RO         1612    i.RCC_HCLKConfig    stm32f10x_rcc.o
+    0x08001524   0x0000004c   Code   RO         1613    i.RCC_HSEConfig     stm32f10x_rcc.o
+    0x08001570   0x0000000c   Code   RO         1617    i.RCC_LSICmd        stm32f10x_rcc.o
+    0x0800157c   0x00000018   Code   RO         1619    i.RCC_PCLK1Config   stm32f10x_rcc.o
+    0x08001594   0x00000018   Code   RO         1620    i.RCC_PCLK2Config   stm32f10x_rcc.o
+    0x080015ac   0x0000000c   Code   RO         1621    i.RCC_PLLCmd        stm32f10x_rcc.o
+    0x080015b8   0x0000001c   Code   RO         1622    i.RCC_PLLConfig     stm32f10x_rcc.o
+    0x080015d4   0x00000018   Code   RO         1625    i.RCC_SYSCLKConfig  stm32f10x_rcc.o
+    0x080015ec   0x00000038   Code   RO         1627    i.RCC_WaitForHSEStartUp  stm32f10x_rcc.o
+    0x08001624   0x00000044   Code   RO          864    i.SMPL_Init         nwk_api.o
+    0x08001668   0x000000b4   Code   RO          865    i.SMPL_Ioctl        nwk_api.o
+    0x0800171c   0x0000000c   Code   RO          866    i.SMPL_Link         nwk_api.o
+    0x08001728   0x00000100   Code   RO          870    i.SMPL_SendOpt      nwk_api.o
+    0x08001828   0x00000018   Code   RO         1803    i.SPI_Cmd           stm32f10x_spi.o
+    0x08001840   0x0000003c   Code   RO         1816    i.SPI_Init          stm32f10x_spi.o
+    0x0800187c   0x00000008   Code   RO         1333    i.SetSysClock       system_stm32f10x.o
+    0x08001884   0x000000e0   Code   RO         1334    i.SetSysClockTo72   system_stm32f10x.o
+    0x08001964   0x00000028   Code   RO         1372    i.SysTick_CLKSourceConfig  misc.o
+    0x0800198c   0x00000044   Code   RO          340    i.Sys_delay_init    delay.o
+    0x080019d0   0x0000004c   Code   RO          341    i.Sys_delay_ms      delay.o
+    0x08001a1c   0x00000060   Code   RO         1336    i.SystemInit        system_stm32f10x.o
+    0x08001a7c   0x00000018   Code   RO         1946    i.USART_Cmd         stm32f10x_usart.o
+    0x08001a94   0x0000001a   Code   RO         1949    i.USART_GetFlagStatus  stm32f10x_usart.o
+    0x08001aae   0x00000002   PAD
+    0x08001ab0   0x000000d8   Code   RO         1953    i.USART_Init        stm32f10x_usart.o
+    0x08001b88   0x00000008   Code   RO         1963    i.USART_SendData    stm32f10x_usart.o
+    0x08001b90   0x00000118   Code   RO          157    i.__bsp_ASSERT      bsp.o
+    0x08001ca8   0x00000024   Code   RO          158    i.__bsp_debug       bsp.o
+    0x08001ccc   0x00000052   Code   RO          159    i.__bsp_debug_dec   bsp.o
+    0x08001d1e   0x00000016   Code   RO          163    i.__bsp_debug_msg   bsp.o
+    0x08001d34   0x00000018   Code   RO          164    i.__bsp_debug_msg_ln  bsp.o
+    0x08001d4c   0x0000005c   Code   RO          400    i.__mrfi_GDO0_INIT  mrfi.o
+    0x08001da8   0x00000010   Code   RO          401    i.__mrfi_SPI_IS_INITIALIZED  mrfi.o
+    0x08001db8   0x0000001c   Code   RO          402    i.__mrfi_SPI_READ_BYTE  mrfi.o
+    0x08001dd4   0x00000014   Code   RO          403    i.__mrfi_SPI_WAIT_DONE  mrfi.o
+    0x08001de8   0x0000002c   Code   RO          404    i.__mrfi_SPI_WRITE_BYTE  mrfi.o
+    0x08001e14   0x0000000e   Code   RO         2197    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08001e22   0x00000002   Code   RO         2198    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08001e24   0x0000000e   Code   RO         2199    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08001e32   0x00000002   PAD
+    0x08001e34   0x00000068   Code   RO          405    i.createRandomAddress  mrfi.o
+    0x08001e9c   0x0000009c   Code   RO          920    i.dispatchFrame     nwk_frame.o
+    0x08001f38   0x0000002a   Code   RO          167    i.gpioPinConfig     bsp.o
+    0x08001f62   0x0000001e   Code   RO          169    i.gpioPinIn         bsp.o
+    0x08001f80   0x0000000e   Code   RO          171    i.gpioPinMask       bsp.o
+    0x08001f8e   0x00000002   PAD
+    0x08001f90   0x00000014   Code   RO          173    i.gpioPort          bsp.o
+    0x08001fa4   0x0000002a   Code   RO         1168    i.handleLinkRequest  nwk_link.o
+    0x08001fce   0x00000018   Code   RO         1259    i.handlePingRequest  nwk_ping.o
+    0x08001fe6   0x00000002   PAD
+    0x08001fe8   0x00000040   Code   RO          710    i.initializeConnection  nwk.o
+    0x08002028   0x0000001a   Code   RO          871    i.ioctlPreInitAccessIsOK  nwk_api.o
+    0x08002042   0x00000002   PAD
+    0x08002044   0x0000013c   Code   RO            1    i.linkTo            main_manyeds_autoack.o
+    0x08002180   0x00000064   Code   RO            2    i.main              main_manyeds_autoack.o
+    0x080021e4   0x00000030   Code   RO          711    i.map_lid2idx       nwk.o
+    0x08002214   0x00000090   Code   RO          406    i.mrfiSpiCmdStrobe  mrfi.o
+    0x080022a4   0x00000038   Code   RO          407    i.mrfiSpiInit       mrfi.o
+    0x080022dc   0x00000068   Code   RO          408    i.mrfiSpiReadReg    mrfi.o
+    0x08002344   0x00000016   Code   RO          409    i.mrfiSpiReadRxFifo  mrfi.o
+    0x0800235a   0x00000002   PAD
+    0x0800235c   0x00000068   Code   RO          410    i.mrfiSpiWriteReg   mrfi.o
+    0x080023c4   0x00000012   Code   RO          411    i.mrfiSpiWriteTxFifo  mrfi.o
+    0x080023d6   0x00000002   PAD
+    0x080023d8   0x00000010   Code   RO          412    i.mrfi_TxCCADone    mrfi.o
+    0x080023e8   0x00000010   Code   RO          413    i.mrfi_TxImmediateDone  mrfi.o
+    0x080023f8   0x0000001c   Code   RO         1038    i.nwk_QInit         nwk_qmgmt.o
+    0x08002414   0x00000050   Code   RO         1039    i.nwk_QadjustOrder  nwk_qmgmt.o
+    0x08002464   0x00000130   Code   RO         1040    i.nwk_QfindOldest   nwk_qmgmt.o
+    0x08002594   0x0000009c   Code   RO         1041    i.nwk_QfindSlot     nwk_qmgmt.o
+    0x08002630   0x000000e4   Code   RO          713    i.nwk_allocateLocalRxPort  nwk.o
+    0x08002714   0x0000003a   Code   RO          921    i.nwk_buildAckReqFrame  nwk_frame.o
+    0x0800274e   0x00000002   PAD
+    0x08002750   0x000000c8   Code   RO          922    i.nwk_buildFrame    nwk_frame.o
+    0x08002818   0x00000022   Code   RO          715    i.nwk_checkConnInfo  nwk.o
+    0x0800283a   0x00000030   Code   RO         1094    i.nwk_connectionControl  nwk_ioctl.o
+    0x0800286a   0x00000028   Code   RO         1095    i.nwk_deviceAddress  nwk_ioctl.o
+    0x08002892   0x00000002   PAD
+    0x08002894   0x00000038   Code   RO          923    i.nwk_frameInit     nwk_frame.o
+    0x080028cc   0x00000006   Code   RO          718    i.nwk_freeConnection  nwk.o
+    0x080028d2   0x00000002   Code   RO         1076    i.nwk_freqInit      nwk_freq.o
+    0x080028d4   0x00000008   Code   RO          982    i.nwk_getBCastAddress  nwk_globals.o
+    0x080028dc   0x0000003c   Code   RO          719    i.nwk_getConnInfo   nwk.o
+    0x08002918   0x00000008   Code   RO          983    i.nwk_getFWVersion  nwk_globals.o
+    0x08002920   0x0000001c   Code   RO          984    i.nwk_getMyAddress  nwk_globals.o
+    0x0800293c   0x0000000c   Code   RO          924    i.nwk_getMyRxType   nwk_frame.o
+    0x08002948   0x00000048   Code   RO          720    i.nwk_getNextConnection  nwk.o
+    0x08002990   0x0000002c   Code   RO          721    i.nwk_getNumObjectFromMsg  nwk.o
+    0x080029bc   0x0000000c   Code   RO          985    i.nwk_getProtocolVersion  nwk_globals.o
+    0x080029c8   0x0000002c   Code   RO          986    i.nwk_globalsInit   nwk_globals.o
+    0x080029f4   0x0000008c   Code   RO          722    i.nwk_isConnectionValid  nwk.o
+    0x08002a80   0x00000040   Code   RO          723    i.nwk_isLinkDuplicate  nwk.o
+    0x08002ac0   0x00000048   Code   RO          724    i.nwk_isValidReply  nwk.o
+    0x08002b08   0x000000d8   Code   RO         1131    i.nwk_join          nwk_join.o
+    0x08002be0   0x00000030   Code   RO         1132    i.nwk_joinInit      nwk_join.o
+    0x08002c10   0x00000148   Code   RO         1171    i.nwk_link          nwk_link.o
+    0x08002d58   0x00000034   Code   RO         1172    i.nwk_linkInit      nwk_link.o
+    0x08002d8c   0x00000010   Code   RO         1228    i.nwk_mgmtInit      nwk_mgmt.o
+    0x08002d9c   0x00000084   Code   RO          725    i.nwk_nwkInit       nwk.o
+    0x08002e20   0x00000010   Code   RO         1261    i.nwk_pingInit      nwk_ping.o
+    0x08002e30   0x00000006   Code   RO         1077    i.nwk_processFreq   nwk_freq.o
+    0x08002e36   0x00000002   PAD
+    0x08002e38   0x00000028   Code   RO         1133    i.nwk_processJoin   nwk_join.o
+    0x08002e60   0x00000030   Code   RO         1173    i.nwk_processLink   nwk_link.o
+    0x08002e90   0x00000048   Code   RO         1230    i.nwk_processMgmt   nwk_mgmt.o
+    0x08002ed8   0x00000030   Code   RO         1262    i.nwk_processPing   nwk_ping.o
+    0x08002f08   0x00000006   Code   RO         1307    i.nwk_processSecurity  nwk_security.o
+    0x08002f0e   0x00000040   Code   RO          726    i.nwk_putNumObjectIntoMsg  nwk.o
+    0x08002f4e   0x0000006c   Code   RO         1096    i.nwk_radioControl  nwk_ioctl.o
+    0x08002fba   0x00000024   Code   RO         1097    i.nwk_rawReceive    nwk_ioctl.o
+    0x08002fde   0x00000048   Code   RO         1098    i.nwk_rawSend       nwk_ioctl.o
+    0x08003026   0x0000009a   Code   RO          925    i.nwk_retrieveFrame  nwk_frame.o
+    0x080030c0   0x00000002   Code   RO         1308    i.nwk_securityInit  nwk_security.o
+    0x080030c2   0x00000002   PAD
+    0x080030c4   0x000000dc   Code   RO          926    i.nwk_sendAckReply  nwk_frame.o
+    0x080031a0   0x00000034   Code   RO          927    i.nwk_sendFrame     nwk_frame.o
+    0x080031d4   0x0000000c   Code   RO          987    i.nwk_setAPAddress  nwk_globals.o
+    0x080031e0   0x0000000c   Code   RO         1174    i.nwk_setLinkToken  nwk_link.o
+    0x080031ec   0x00000024   Code   RO          988    i.nwk_setMyAddress  nwk_globals.o
+    0x08003210   0x00000024   Code   RO            3    i.sCB               main_manyeds_autoack.o
+    0x08003234   0x00000160   Code   RO         1176    i.smpl_send_link_reply  nwk_link.o
+    0x08003394   0x00000002   Code   RO         1231    i.smpl_send_mgmt_reply  nwk_mgmt.o
+    0x08003396   0x00000034   Code   RO         1263    i.smpl_send_ping_reply  nwk_ping.o
+    0x080033ca   0x00000002   PAD
+    0x080033cc   0x000000e0   Code   RO          414    i.spiBurstFifoAccess  mrfi.o
+    0x080034ac   0x00000088   Code   RO          415    i.spiRegAccess      mrfi.o
+    0x08003534   0x00000030   Code   RO            4    i.toggleLED         main_manyeds_autoack.o
+    0x08003564   0x00000015   Data   RO          174    .constdata          bsp.o
+    0x08003579   0x00000120   Data   RO          417    .constdata          mrfi.o
+    0x08003699   0x00000003   PAD
+    0x0800369c   0x00000018   Data   RO          928    .constdata          nwk_frame.o
+    0x080036b4   0x00000009   Data   RO          989    .constdata          nwk_globals.o
+    0x080036bd   0x00000010   Data   RO         1628    .constdata          stm32f10x_rcc.o
+    0x080036cd   0x00000003   PAD
+    0x080036d0   0x00000020   Data   RO         2195    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000580, Max: 0x00005000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000006   Data   RW            5    .data               main_manyeds_autoack.o
+    0x20000006   0x00000004   Data   RW          343    .data               delay.o
+    0x2000000a   0x0000000f   Data   RW          418    .data               mrfi.o
+    0x20000019   0x00000029   Data   RW          727    .data               nwk.o
+    0x20000042   0x00000001   Data   RW          872    .data               nwk_api.o
+    0x20000043   0x00000001   PAD
+    0x20000044   0x00000010   Data   RW          929    .data               nwk_frame.o
+    0x20000054   0x00000009   Data   RW          990    .data               nwk_globals.o
+    0x2000005d   0x00000003   PAD
+    0x20000060   0x00000009   Data   RW         1135    .data               nwk_join.o
+    0x20000069   0x00000003   PAD
+    0x2000006c   0x00000009   Data   RW         1177    .data               nwk_link.o
+    0x20000075   0x00000003   PAD
+    0x20000078   0x00000005   Data   RW         1232    .data               nwk_mgmt.o
+    0x2000007d   0x00000001   Data   RW         1264    .data               nwk_ping.o
+    0x2000007e   0x00000002   PAD
+    0x20000080   0x00000004   Data   RW         1338    .data               system_stm32f10x.o
+    0x20000084   0x00000004   Data   RW         1629    .data               stm32f10x_rcc.o
+    0x20000088   0x00000030   Zero   RW          416    .bss                mrfi.o
+    0x200000b8   0x000000c8   Zero   RW         1043    .bss                nwk_qmgmt.o
+    0x20000180   0x00000400   Zero   RW         1325    STACK               startup_stm32f10x_md_vl.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      1188        194         21          0          0      27410   bsp.o
+       144         22          0          4          0       1432   delay.o
+       500         46          0          6          0     246024   main_manyeds_autoack.o
+       152         12          0          0          0       1938   misc.o
+      4496       1210        288         15         48      48688   mrfi.o
+      1028         40          0         41          0      14112   nwk.o
+       542         20          0          1          0       5340   nwk_api.o
+       934         68         24         16          0       8202   nwk_frame.o
+         8          0          0          0          0       1965   nwk_freq.o
+       148         58          9          9          0       5181   nwk_globals.o
+       304          0          0          0          0       4822   nwk_ioctl.o
+       304         34          0          9          0       3540   nwk_join.o
+       834         50          0          9          0       6171   nwk_link.o
+        90          8          0          5          0       3013   nwk_mgmt.o
+       140         10          0          1          0       3681   nwk_ping.o
+       568         26          0          0        200       5161   nwk_qmgmt.o
+         8          0          0          0          0       1905   nwk_security.o
+        36          8        288          0       1024        952   startup_stm32f10x_md_vl.o
+        40         16          0          0          0       1821   stm32f10x_crc.o
+        32          6          0          0          0        680   stm32f10x_dbgmcu.o
+       148          6          0          0          0       1252   stm32f10x_exti.o
+        64          4          0          0          0        738   stm32f10x_gpio.o
+       740        104         16          4          0      13734   stm32f10x_rcc.o
+        84          0          0          0          0       2529   stm32f10x_spi.o
+       274          6          0          0          0       4624   stm32f10x_usart.o
+       328         28          0          4          0       2757   system_stm32f10x.o
+
+    ----------------------------------------------------------------------
+     13164       1976        684        136       1272     417672   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        30          0          6         12          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        26          0          0          0          0         80   memcmp.o
+        64          0          0          0          0         76   memmovea.o
+        36          0          0          0          0        108   memseta.o
+
+    ----------------------------------------------------------------------
+       216         16          0          0          0        332   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       212         16          0          0          0        332   mc_w.l
+
+    ----------------------------------------------------------------------
+       216         16          0          0          0        332   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     13380       1992        684        136       1272     409576   Grand Totals
+     13380       1992        684        136       1272     409576   ELF Image Totals
+     13380       1992        684        136          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                14064 (  13.73kB)
+    Total RW  Size (RW Data + ZI Data)              1408 (   1.38kB)
+    Total ROM Size (Code + RO Data + RW Data)      14200 (  13.87kB)
+
+==============================================================================
+

@@ -1,0 +1,17 @@
+.\cc1101-end device\stm32f10x_spi.o: ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c
+.\cc1101-end device\stm32f10x_spi.o: ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h
+.\cc1101-end device\stm32f10x_spi.o: ..\..\..\..\..\Components\bsp\boards\STM32\stm32f10x.h
+.\cc1101-end device\stm32f10x_spi.o: ..\..\..\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST/STM32F10x/stm32f10x.h
+.\cc1101-end device\stm32f10x_spi.o: ..\..\..\..\..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h
+.\cc1101-end device\stm32f10x_spi.o: e:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\cc1101-end device\stm32f10x_spi.o: ..\..\..\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST/STM32F10x/system_stm32f10x.h
+.\cc1101-end device\stm32f10x_spi.o: ..\..\..\..\..\Components\bsp\boards\STM32\stm32f10x_conf.h
+.\cc1101-end device\stm32f10x_spi.o: ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_crc.h
+.\cc1101-end device\stm32f10x_spi.o: ..\..\..\..\..\Components\bsp\boards\STM32\stm32f10x.h
+.\cc1101-end device\stm32f10x_spi.o: ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dbgmcu.h
+.\cc1101-end device\stm32f10x_spi.o: ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h
+.\cc1101-end device\stm32f10x_spi.o: ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\cc1101-end device\stm32f10x_spi.o: ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\cc1101-end device\stm32f10x_spi.o: ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h
+.\cc1101-end device\stm32f10x_spi.o: ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
+.\cc1101-end device\stm32f10x_spi.o: ..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
