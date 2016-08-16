@@ -40,7 +40,7 @@ void ProMsg(void)
 			Gprs_GetConnectStatus(&dwGprsStatus);
 			if(dwGprsStatus == GPRS_TCP_OK)
 			{	
-				heart_ticks = 0;
+//				heart_ticks = 0;
 				Gprs_Write((unsigned char*)&gMsgPro.Data,13+wlen );
 				gMsgPro.wMsgType = MSG_TYPE_BLANK;
 			}

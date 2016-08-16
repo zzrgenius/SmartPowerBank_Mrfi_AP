@@ -237,8 +237,8 @@ int mrfi_loop(void)
 						tRespMsg.ucCmd = RTDATA_INQUIRE;
 						tRespMsg.wLen[0] = NET_ADDR_SIZE+2+1+len;
 						tRespMsg.wLen[1] = 0;
-						tRespMsg.Data[0] = 1;//tGetPar.VerPCB;
-						tRespMsg.Data[1] = 0;//tGetPar.VerSystem;
+//						tRespMsg.Data[0] = 1;//tGetPar.VerPCB;
+//						tRespMsg.Data[1] = 0;//tGetPar.VerSystem;
 						memcpy(&tRespMsg.Data[0],&tConnInfo->peerAddr[0],NET_ADDR_SIZE);
 						memcpy(&tRespMsg.Data[NET_ADDR_SIZE],&tConnInfo->thisLinkID,1);
 						if((len+5) > RESP_PAYLOAD_SIZE)

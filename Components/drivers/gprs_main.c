@@ -11,7 +11,7 @@
  
 extern int MsgPackage(T_MSG_RESP *ptRespMsg,const u8 type ) ;
 static uint32_t GprsTicks = 0;
-uint32_t heart_ticks = 0;
+uint16_t heart_ticks = 0;
 void vGprsConnectTask( void  )
 {
 	static u8 FirstSendVerFlag = 0;	//  连接到服务器后发送一次 系统版本号
@@ -27,16 +27,15 @@ void vGprsConnectTask( void  )
 
  
 	//Gprs_Init();
-	
+	if((uint16_t)(SecondTicks -  heart_ticks) > 150)
+	{
+		heart_ticks = SecondTicks;
+		FirstSendVerFlag = 1;
+	}	 
 	if((uint32_t)(SysRunTicks -  GprsTicks) > 2)
 	{
 		GprsTicks = SysRunTicks;
-		heart_ticks++;
-		if(heart_ticks > 20000)
-		{
-			heart_ticks = 0;
-			FirstSendVerFlag = 1;
-		}
+
 		/*send data to gprs server*/
 		Gprs_GetConnectStatus(&dwGprsStatus);
 		if((FirstSendVerFlag == 0 )&&(dwGprsStatus == GPRS_TCP_OK))
