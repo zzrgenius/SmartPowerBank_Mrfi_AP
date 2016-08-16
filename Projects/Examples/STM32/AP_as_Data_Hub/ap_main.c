@@ -7,6 +7,7 @@ extern void vGprsConnectTask( void  );
 extern int mrif_config (void);
 void ProMsg(void);
 T_MSG gMsgPro;
+extern uint16_t heart_ticks;
 int main(void)
 {
 
@@ -38,7 +39,8 @@ void ProMsg(void)
 		case MSG_TYPE_RESP_GPRS:
 			Gprs_GetConnectStatus(&dwGprsStatus);
 			if(dwGprsStatus == GPRS_TCP_OK)
-			{						 
+			{	
+				heart_ticks = 0;
 				Gprs_Write((unsigned char*)&gMsgPro.Data,13+wlen );
 				gMsgPro.wMsgType = MSG_TYPE_BLANK;
 			}
